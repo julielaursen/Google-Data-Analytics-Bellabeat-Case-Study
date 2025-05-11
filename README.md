@@ -73,6 +73,7 @@ To begin the analysis, we load all the required R packages in https://github.com
   - `readr`: For reading data files
   - `tidyr`: For reshaping and cleaning data
   - `tibble, stringr, forcats, purrr`: Support functions for tidy data workflows
+- `here, skimmer, and janitor`: for simplifying data cleaning tasks
 
 To install the tidyverse package:
   `install.packages("tidyverse")`
