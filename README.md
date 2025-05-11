@@ -36,30 +36,31 @@ This data was sourced from FitBit Fitness Tracker Data and made available by the
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Reliable**       | ⚠️ TBD                             |
 | **Original**       | ❌ Not original. This is **third-party data** collected independently from Fitbit users via Amazon Mechanical Turk, not from Bellabeat’s own user base and not affiliated with Bellabeat.             |
-| **Comprehensive**  | ✅ Yes? TBD      |
+| **Comprehensive**  | ❌ No, the dataset only spans a 3 day timestamp (Zenodo is operated by CERN and therefore using European time as consistent with Switzerland).     |
 | **Current**        | ❌ No. The data was collected in 2016. While it can still reveal usage patterns, it may not reflect current trends in smart device engagement.         |
 | **Cited**          | ✅ Yes citation: Furberg, R., Brinton, J., Keating, M., & Ortiz, A. (2016). Crowd-sourced Fitbit datasets 03.12.2016-05.12.2016 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.53894       |
 
-## Is this Good Data?
+## ✅ Why We Consider This Good Data
 
-Reasons why for categorizing it as good data:
-- This meets the criteria for size validation. According to the **Central Limit Theoreum (CLT)** in the field of probability and statistics, a sample of 30 is the smallest sample size for which the CLT is still valid.
-- This data is credible as the dataset was created by researchers affiliated with RTI International, a reputable nonprofit research institute. The dataset had a transparent methodology including participant consent. Although the DOI was not referenced on kaggle, the dataset has a DOI through zenodo, ensuring it can be reliably cited and accessed. Zenodo is operated by CERN and OpenAIRE, providing a trusted platform for research data.
-- Although technically self-reported, the data itself is device-generated, making it inherently more objective than traditional self-report surveys.
-- No PII was retained in the final dataset, so the dataset does not expose privacy or security concerns.
-- This data is licensed for public domain: https://creativecommons.org/publicdomain/zero/1.0/
-- The data is accessible in that it is distributed under the Creative Commons Attribution 4.0 (CC BY 4.0) license, hosted on an open-access platform, and requires no proprietary software to open. Zenodo provides a clear title and abstract along with basic metadata.
+| Reason                            | Details                                                                                                                                                                                                                          |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 📏 **Statistically Valid Sample** | The dataset includes 30 participants — the **minimum sample size** for the [Central Limit Theorem (CLT)](https://en.wikipedia.org/wiki/Central_limit_theorem) to apply, ensuring foundational validity in statistical inference. |
+| 🧠 **Credible Source**            | Collected by researchers at **RTI International**, a respected nonprofit research institute. It has a valid [DOI](https://doi.org/10.5281/zenodo.53894), and is hosted on **Zenodo**, backed by CERN & OpenAIRE.                 |
+| ⏱ **Objective Measurements**      | While user-submitted, the data was **device-generated**, reducing the potential for typical biases found in self-report surveys.                                                                                              |
+| 🔒 **Privacy-Respecting**         | No personally identifiable information (PII) is included — ensuring ethical data sharing.                                                                                                                                        |
+| 🌍 **Open and Accessible**        | Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and hosted on a public, open-access platform. No proprietary software is required.                                                           |
 
-Reasons for categorizing it as bad data:
-- Although the dataset meets the minimum for size validation, it is only the minimum. To increase the reliability of the sample size accurately reflecting the general population, we should increase the sample size.
-- Although no PII was retained in the final dataset, it is hard to know if this dataset matches the general population without age, gender, location or other demographic factors. It is also hard to know if this dataset matches the general population as far as disabilities.
-- Because submission was manual and not done in a controlled setting, there is potential for data corruption, omission, variability in device models, and user misunderstandings leading to misreporting during export.
+## ⚠️ Where the Data Falls Short
+
+| Concern                            | Details                                                                                                                                            |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 📉 **Sample Size is Bare Minimum** | While statistically valid, a sample size of 30 is still **limited**. Larger samples would provide more robust insights.                            |
+| 🙈 **Limited Demographics**        | Lack of demographic detail (e.g. age, gender, disability status) makes it hard to **generalize** to broader populations.                           |
+| 🧩 **Manual Submission Risks**     | Manual exports introduce potential for **data corruption**, **omission**, **variability in device models**, and **user misunderstandings**, leading to misreporting during export
 
 
 More questions to answer:
 - How is the data organized? Is it in long or wide format?
-- How are you addressing licensing, privacy, security, and accessibility?
-  - Accessibility:
 - How does it help you answer your question?
 - Are there any problems with the data?
 
