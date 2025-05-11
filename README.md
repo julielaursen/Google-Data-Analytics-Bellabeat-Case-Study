@@ -48,6 +48,7 @@ Reasons why for categorizing it as good data:
 - Although technically self-reported, the data itself is device-generated, making it inherently more objective than traditional self-report surveys.
 - No PII was retained in the final dataset, so the dataset does not expose privacy or security concerns.
 - This data is licensed for public domain: https://creativecommons.org/publicdomain/zero/1.0/
+- The data is accessible in that it is distributed under the Creative Commons Attribution 4.0 (CC BY 4.0) license, hosted on an open-access platform, and requires no proprietary software to open. Zenodo provides a clear title and abstract along with basic metadata.
 
 Reasons for categorizing it as bad data:
 - Although the dataset meets the minimum for size validation, it is only the minimum. To increase the reliability of the sample size accurately reflecting the general population, we should increase the sample size.
