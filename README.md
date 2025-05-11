@@ -75,7 +75,21 @@ To install the tidyverse package:
 To load the tidyverse package: 
   `library(tidyverse)`
 
-#### How is the data organized? Is it in long or wide format?
+#### How is the data organized?
+
+The data is organized in two different folders, one for the period of 3/12/16-4/11/16 and one for 4/12/16-5/12/16. They have the same columns in the same formats. I re-organized the data by combining each individual csv into a combined dataframe, confirming that there was no duplication.
+
+```r
+# Load both datasets
+daily_activity1 <- read_csv("mturkfitbit_export_3.12.16-4.11.16/Fitabase Data 3.12.16-4.11.16/dailyActivity_merged.csv")
+daily_activity2 <- read_csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv")
+
+# Combine them into one dataframe
+daily_activity <- bind_rows(daily_activity1, daily_activity2)
+
+# Check for duplication
+daily_activity %>% duplicated() %>% sum()
+```
   
 #### How does it help you answer your question?
 
@@ -83,9 +97,6 @@ To load the tidyverse package:
 
 Yes, the summary of the dataset from the project states that there are 30 total users in the dataset. However, there are 33 people tracking their daily activity.
 
-```r
-daily_activity <- read.csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv")
-```
 ```r
 > n_distinct(daily_activity$Id)
 [1] 33
