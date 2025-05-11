@@ -23,7 +23,7 @@ Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
 Secondary stakeholders: Bellabeat marketing analytics team.
 
 ## 2. Prepare 
-Data Source: 30 participants FitBit Fitness Tracker Data from Mobius: https://www.kaggle.com/arashnic/fitbit
+This data was sourced from FitBit Fitness Tracker Data and publishes by the user Möbius on Kaggle at https://www.kaggle.com/arashnic/fitbit. Kaggle is a platform for data science and machine learning projects.
 
 ## ROCCC Analysis of Dataset
 
@@ -38,11 +38,13 @@ Data Source: 30 participants FitBit Fitness Tracker Data from Mobius: https://ww
 TBD:
 
 I will answer the following questions
-● Where is your data stored?
-● How is the data organized? Is it in long or wide format?
-● Are there issues with bias or credibility in this data? 
-● How are you addressing licensing, privacy, security, and accessibility?
+- How is the data organized? Is it in long or wide format?
+- Are there issues with bias or credibility in this data? 
+- How are you addressing licensing, privacy, security, and accessibility?
   - Licensing: this data is public domain. https://creativecommons.org/publicdomain/zero/1.0/
-● How did you verify the data’s integrity?
-● How does it help you answer your question?
-● Are there any problems with the data?
+  - Privacy:
+  - Security:
+  - Accessibility:
+- How did you verify the data’s integrity?
+- How does it help you answer your question?
+- Are there any problems with the data?
