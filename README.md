@@ -40,19 +40,25 @@ This data was sourced from FitBit Fitness Tracker Data and made available by the
 | **Current**        | ❌ No. The data was collected in 2016. While it can still reveal usage patterns, it may not reflect current trends in smart device engagement.         |
 | **Cited**          | ✅ Yes citation: Furberg, R., Brinton, J., Keating, M., & Ortiz, A. (2016). Crowd-sourced Fitbit datasets 03.12.2016-05.12.2016 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.53894       |
 
-TBD:
+## Is this Good Data?
 
-I will answer the following questions
+Reasons why for categorizing it as good data:
+- This meets the criteria for size validation. According to the **Central Limit Theoreum (CLT)** in the field of probability and statistics, a sample of 30 is the smallest sample size for which the CLT is still valid.
+- This data is credible as the dataset was created by researchers affiliated with RTI International, a reputable nonprofit research institute. The dataset had a transparent methodology including participant consent. Although the DOI was not referenced on kaggle, the dataset has a DOI through zenodo, ensuring it can be reliably cited and accessed. Zenodo is operated by CERN and OpenAIRE, providing a trusted platform for research data.
+- Although technically self-reported, the data itself is device-generated, making it inherently more objective than traditional self-report surveys.
+- No PII was retained in the final dataset, so the dataset does not expose privacy or security concerns.
+- This data is licensed for public domain: https://creativecommons.org/publicdomain/zero/1.0/
+
+Reasons for categorizing it as bad data:
+- Although the dataset meets the minimum for size validation, it is only the minimum. To increase the reliability of the sample size accurately reflecting the general population, we should increase the sample size.
+- Although no PII was retained in the final dataset, it is hard to know if this dataset matches the general population without age, gender, location or other demographic factors. It is also hard to know if this dataset matches the general population as far as disabilities.
+- Because submission was manual and not done in a controlled setting, there is potential for data corruption, omission, variability in device models, and user misunderstandings leading to misreporting during export.
+
+
+More questions to answer:
 - How is the data organized? Is it in long or wide format?
-- Are there issues with bias or credibility in this data?
-  - Yes, according to the **Central Limit Theoreum (CLT)** in the field of probability and statistics, a sample of 30 is the smallest sample size for which the CLT is still valid. To increase the reliability of the sample size accurately reflecting the general population, we should increase the sample size.
-  - Yes, the gender, age, and disability status are not noted.
 - How are you addressing licensing, privacy, security, and accessibility?
-  - Licensing: this data is public domain. https://creativecommons.org/publicdomain/zero/1.0/
-  - Privacy:
-  - Security:
   - Accessibility:
-- How did you verify the data’s integrity?
 - How does it help you answer your question?
 - Are there any problems with the data?
 
