@@ -25,10 +25,10 @@ Secondary stakeholders: Bellabeat marketing analytics team.
 ## 2. Prepare 
 Data Source: 30 participants FitBit Fitness Tracker Data from Mobius: https://www.kaggle.com/arashnic/fitbit
 
-The dataset has 18 CSV. Does the data **ROCCC**, meaning is it
+The dataset has 18 CSV. Does the data **ROCCC**, meaning we need to answer whether it is:
 
 - Reliabile:
-- Original: 
+- **Original**: This is not an original dataset. The data was collected independently via Amazon Mechanical Turk from Fitbit users, making it third-party data—information gathered and shared by an external source not directly affiliated with Bellabeat. While not proprietary, this dataset serves as a reasonable proxy for Bellabeat user data for the purpose of portfolio-based analysis.
 - Comprehensive: 
 - Current:
 - Cited: 
