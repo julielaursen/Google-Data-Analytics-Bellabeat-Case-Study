@@ -58,12 +58,6 @@ This data was sourced from FitBit Fitness Tracker Data and made available by the
 | 🙈 **Limited Demographics**        | Lack of demographic detail (e.g. age, gender, disability status) makes it hard to **generalize** to broader populations.                           |
 | 🧩 **Manual Submission Risks**     | Manual exports introduce potential for **data corruption**, **omission**, **variability in device models**, and **user misunderstandings**, leading to misreporting during export
 
-
-More questions to answer:
-- How is the data organized? Is it in long or wide format?
-- How does it help you answer your question?
-- Are there any problems with the data?
-
 To begin the analysis, we load all the required R packages in https://github.com/julielaursen/r-fitbit-data. These package are used for data cleaning, manipulation, visualization, and time/date processing. 
 
 ### Packages used in this project:
@@ -80,3 +74,20 @@ To install the tidyverse package:
 
 To load the tidyverse package: 
   `library(tidyverse)`
+
+#### How is the data organized? Is it in long or wide format?
+  
+#### How does it help you answer your question?
+
+#### Are there any problems with the data?
+
+Yes, the summary of the dataset from the project states that there are 30 total users in the dataset. However, there are 33 people tracking their daily activity.
+
+```r
+daily_activity <- read.csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv")
+```
+```r
+> n_distinct(daily_activity$Id)
+[1] 33
+```
+
