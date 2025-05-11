@@ -18,6 +18,11 @@ Bellabeat is a small high-tech company that manufactures health-focused smart pr
 ## 1. Ask
 💡 BUSINESS TASK: Our team has been asked to analyze smart device data to gain insight into consumer behavior trends. The insights we discover will then help guide marketing strategy for the company. 
 
+Specifically, our team needs to answer:
+1. What are some trends in smart device usage?
+2. How could these trends apply to Bellabeat customers?
+3. How could these trends help influence Bellabeat's marketing strategy?
+
 Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
 
 Secondary stakeholders: Bellabeat marketing analytics team.
