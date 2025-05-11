@@ -46,6 +46,7 @@ I will answer the following questions
 - How is the data organized? Is it in long or wide format?
 - Are there issues with bias or credibility in this data?
   - Yes, according to the **Central Limit Theoreum (CLT)** in the field of probability and statistics, a sample of 30 is the smallest sample size for which the CLT is still valid. To increase the reliability of the sample size accurately reflecting the general population, we should increase the sample size.
+  - Yes, the gender, age, and disability status are not noted.
 - How are you addressing licensing, privacy, security, and accessibility?
   - Licensing: this data is public domain. https://creativecommons.org/publicdomain/zero/1.0/
   - Privacy:
