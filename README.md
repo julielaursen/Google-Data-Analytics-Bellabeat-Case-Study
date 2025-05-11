@@ -34,3 +34,15 @@ Data Source: 30 participants FitBit Fitness Tracker Data from Mobius: https://ww
 | **Comprehensive**  | ✅ Yes? TBD      |
 | **Current**        | ❌ No. The data was collected in 2016. While it can still reveal usage patterns, it may not reflect current trends in smart device engagement.         |
 | **Cited**          | TBD         |
+
+TBD:
+
+I will answer the following questions
+● Where is your data stored?
+● How is the data organized? Is it in long or wide format?
+● Are there issues with bias or credibility in this data? 
+● How are you addressing licensing, privacy, security, and accessibility?
+  - Licensing: this data is public domain. https://creativecommons.org/publicdomain/zero/1.0/
+● How did you verify the data’s integrity?
+● How does it help you answer your question?
+● Are there any problems with the data?
