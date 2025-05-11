@@ -66,10 +66,16 @@ More questions to answer:
 
 To begin the analysis, we load all the required R packages in https://github.com/julielaursen/r-fitbit-data. These package are used for data cleaning, manipulation, visualization, and time/date processing. 
 
-Packages used in this project:
+### Packages used in this project:
 - `tidyverse`: a colletion of R packages for data science, including:
   - `dplyr`: For data wrangling and transformation
   - `ggplot2`: For visualizing trends and patterns
   - `readr`: For reading data files
   - `tidyr`: For reshaping and cleaning data
   - `tibble, stringr, forcats, purrr`: Support functions for tidy data workflows
+
+To install the tidyverse package:
+  `install.packages("tidyverse")`
+
+To load the tidyverse package: 
+  `library(tidyverse)`
