@@ -38,7 +38,7 @@ This data was sourced from FitBit Fitness Tracker Data and made available by the
 | **Original**       | ❌ Not original. This is **third-party data** collected independently from Fitbit users via Amazon Mechanical Turk, not from Bellabeat’s own user base and not affiliated with Bellabeat.             |
 | **Comprehensive**  | ✅ Yes? TBD      |
 | **Current**        | ❌ No. The data was collected in 2016. While it can still reveal usage patterns, it may not reflect current trends in smart device engagement.         |
-| **Cited**          | TBD         |
+| **Cited**          | ✅ Yes citation: Furberg, R., Brinton, J., Keating, M., & Ortiz, A. (2016). Crowd-sourced Fitbit datasets 03.12.2016-05.12.2016 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.53894       |
 
 TBD:
 
