@@ -25,9 +25,9 @@ Secondary stakeholders: Bellabeat marketing analytics team.
 ## 2. Prepare 
 Data Source: 30 participants FitBit Fitness Tracker Data from Mobius: https://www.kaggle.com/arashnic/fitbit
 
-The dataset has 18 CSV. The data also follow a ROCCC approach:
+The dataset has 18 CSV. Does the data **ROCCC**, meaning is it
 
-- Reliability: 
+- Reliabile:
 - Original: 
 - Comprehensive: 
 - Current:
