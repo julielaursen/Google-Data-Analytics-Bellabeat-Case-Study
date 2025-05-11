@@ -34,7 +34,7 @@ This data was sourced from FitBit Fitness Tracker Data and made available by the
 
 | **Criterion**      | **Assessment**                                                                                                                                       |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Reliable**       | ⚠️ TBD                             |
+| **Reliable**       | ⚠️ Medium- this is reliable enough for exploratory analysis but not for clinical research or long-term behavior modeling.                        |
 | **Original**       | ❌ Not original. This is **third-party data** collected independently from Fitbit users via Amazon Mechanical Turk, not from Bellabeat’s own user base and not affiliated with Bellabeat.             |
 | **Comprehensive**  | ❌ No, the dataset only spans a 3 day timestamp (Zenodo is operated by CERN and therefore using European time).     |
 | **Current**        | ❌ No. The data was collected in 2016. While it can still reveal usage patterns, it may not reflect current trends in smart device engagement.         |
