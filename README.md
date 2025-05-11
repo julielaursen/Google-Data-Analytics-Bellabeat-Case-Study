@@ -23,7 +23,7 @@ Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
 Secondary stakeholders: Bellabeat marketing analytics team.
 
 ## 2. Prepare 
-This data was sourced from FitBit Fitness Tracker Data and publishes by the user Möbius on Kaggle at https://www.kaggle.com/arashnic/fitbit. Kaggle is a platform for data science and machine learning projects.
+This data was sourced from FitBit Fitness Tracker Data and made available by the user Möbius on Kaggle at https://www.kaggle.com/arashnic/fitbit. This is a public dataset. Kaggle is a platform for data science and machine learning projects.
 
 ## ROCCC Analysis of Dataset
 
