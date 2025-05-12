@@ -77,7 +77,7 @@ To load the tidyverse package:
 
 #### How is the data organized?
 
-The data is organized in two different folders, one for the period of 3/12/16-4/11/16 and one for 4/12/16-5/12/16. They have the same columns in the same formats. I re-organized the data by combining each individual csv into a combined dataframe, confirming that there was no duplication.
+The data is organized in two different folders, one for the period of 3/12/16-4/11/16 and one for 4/12/16-5/12/16. They have the same columns in the same formats. The data is in wide format becuase it's a time series and wide format is best with time-series plots per metric. I re-organized the data by combining each individual csv into a combined dataframe, confirming that there was no duplication.
 
 ```r
 # Load both datasets
