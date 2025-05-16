@@ -32,13 +32,14 @@ This data was sourced from FitBit Fitness Tracker Data and made available by the
 
 ## ROCCC Analysis of Dataset
 
-| **Criterion**      | **Assessment**                                                                                                                                       |
-|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Reliable**       | ⚠️ Medium- this is reliable enough for exploratory analysis but not for clinical research or long-term behavior modeling.                        |
-| **Original**       | ❌ Not original. This is **third-party data** collected independently from Fitbit users via Amazon Mechanical Turk, not from Bellabeat’s own user base and not affiliated with Bellabeat.             |
-| **Comprehensive**  | ❌ No, the dataset only spans a short period of time and does not include demographic factors.     |
-| **Current**        | ❌ No. The data was collected in 2016. While it can still reveal usage patterns, it may not reflect current trends in smart device engagement.         |
-| **Cited**          | ✅ Yes citation: Furberg, R., Brinton, J., Keating, M., & Ortiz, A. (2016). Crowd-sourced Fitbit datasets 03.12.2016-05.12.2016 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.53894       |
+| **Criterion**      | **Result** | **Assessment**                                                                                                                                       |
+|--------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Reliable**       | ⚠️ Medium  | This is reliable enough for exploratory analysis but not for clinical research or long-term behavior modeling.                                      |
+| **Original**       | ❌ No       | This is **third-party data** collected independently from Fitbit users via Amazon Mechanical Turk, not from Bellabeat’s own user base.             |
+| **Comprehensive**  | ❌ No       | The dataset only spans a short period of time and does not include demographic factors.                                                            |
+| **Current**        | ❌ No       | The data was collected in 2016. While it can still reveal usage patterns, it may not reflect current trends in smart device engagement.            |
+| **Cited**          | ✅ Yes      | Citation: Furberg, R., Brinton, J., Keating, M., & Ortiz, A. (2016). Crowd-sourced Fitbit datasets 03.12.2016-05.12.2016 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.53894 |
+
 
 ## ✅ Why We Consider This Good Data
 
