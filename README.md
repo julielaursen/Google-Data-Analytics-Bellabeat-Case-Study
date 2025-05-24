@@ -96,10 +96,28 @@ daily_activity %>% duplicated() %>% sum()
 
 #### Are there any problems with the data?
 
-Yes, the summary of the dataset from the project states that there are 30 total users in the dataset. However, there are 33 people tracking their daily activity.
+Yes, the summary of the dataset from the project states that there are 30 total users in the dataset. However, there are 33 people tracking their daily activity and the people who are tracking their activity are not also consistently tracking other metrics.
 
 ```r
 > n_distinct(daily_activity$Id)
 [1] 33
+> n_distinct(hourly_calories$Id)
+[1] 35
+> n_distinct(heartrate_seconds$Id)
+[1] 15
+> n_distinct(hourly_intensities$Id)
+[1] 15
+> n_distinct(hourly_steps$Id)
+[1] 35
+> n_distinct(minnute_calories_narrow$Id)
+[1] 35
+> n_distinct(minute_intensities_narrow$Id)
+[1] 35
+> n_distinct(minute_sleep$Id)
+[1] 25
+> n_distinct(minute_steps_narrow$Id)
+[1] 35
+> n_distinct(weightlog_info$Id)
+[1] 13
 ```
 
