@@ -91,33 +91,34 @@ daily_activity <- bind_rows(daily_activity1, daily_activity2)
 # Check for duplication
 daily_activity %>% duplicated() %>% sum()
 ```
+
+However on analysis of the data, it seems the data from folder1 may be incomplete. The range of dates often stop at 4/9 which would leave a noticeable 3 day gap between the two data collections. There are also a different number of users in the dataset. For example, 35 users recorded daily activity in the first data set and only 3 in the second dataset. It seems that the user with ID 2891001357 and ID 6391747486 may have dropped out of the study between the first and second dataset. Therefore, we will only focus on the second dataset as it is more complete.
   
 #### How does it help you answer your question?
 
 #### Are there any problems with the data?
 
-Yes, the summary of the dataset from the project states that there are 30 total users in the dataset. However, there are 33 people tracking their daily activity and the people who are tracking their activity are not also consistently tracking other metrics. This is over the initial combined datasets of March to April **AND** April to May. Hourly workout intensities, heartrate seconds, minutes slept, and weightlog are being tracked by less than the statistically significiant amount of people to form a valid sample.
+Yes, the summary of the dataset from the project states that there are 30 total users in the dataset. However, there are 33 people tracking their daily activity and the people who are tracking their activity are not also consistently tracking other metrics. Heartrate seconds, minutes slept, and weightlog are being tracked by less than the statistically significiant amount of people to form a valid sample.
 
 ```r
 > n_distinct(daily_activity$Id)
 [1] 33
 > n_distinct(hourly_calories$Id)
-[1] 35
+[1] 33
 > n_distinct(heartrate_seconds$Id)
-[1] 15
+[1] 14
 > n_distinct(hourly_intensities$Id)
-[1] 15
+[1] 33
 > n_distinct(hourly_steps$Id)
-[1] 35
-> n_distinct(minnute_calories_narrow$Id)
-[1] 35
+[1] 33
+> n_distinct(minute_calories_narrow$Id)
+[1] 33
 > n_distinct(minute_intensities_narrow$Id)
-[1] 35
+[1] 33
 > n_distinct(minute_sleep$Id)
-[1] 25
+[1] 24
 > n_distinct(minute_steps_narrow$Id)
-[1] 35
+[1] 33
 > n_distinct(weightlog_info$Id)
-[1] 13
+[1] 8
 ```
-
