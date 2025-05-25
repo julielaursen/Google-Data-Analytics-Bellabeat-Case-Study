@@ -151,14 +151,25 @@ I then confirmed this by removing duplicates and comparing the rows before and a
 
 Daily tables of activity were in long format, but the data in csvs that calculated by minutes came in two different versions. There were tables in long format and tables in wide format. I found the tables in wide format difficult to read. For example,
 
-2.1.10 Minute Calories (Wide)
+**Minute Calories (Wide)**
 
-ActivityHour - Date and hour value in mm/dd/yyyy hh:mm:ss format.
-Calories00 - Calories59 - Total number of estimated calories burned. Example: Calories05 = calories burned in fifth minute of the hour.
-2.1.11 Minute Calories (Narrow)
+> colnames(minute_calories_wide)
+ [1] "Id"           "ActivityHour" "Calories00"   "Calories01"   "Calories02"   "Calories03"   "Calories04"   "Calories05"  
+ [9] "Calories06"   "Calories07"   "Calories08"   "Calories09"   "Calories10"   "Calories11"   "Calories12"   "Calories13"  
+[17] "Calories14"   "Calories15"   "Calories16"   "Calories17"   "Calories18"   "Calories19"   "Calories20"   "Calories21"  
+[25] "Calories22"   "Calories23"   "Calories24"   "Calories25"   "Calories26"   "Calories27"   "Calories28"   "Calories29"  
+[33] "Calories30"   "Calories31"   "Calories32"   "Calories33"   "Calories34"   "Calories35"   "Calories36"   "Calories37"  
+[41] "Calories38"   "Calories39"   "Calories40"   "Calories41"   "Calories42"   "Calories43"   "Calories44"   "Calories45"  
+[49] "Calories46"   "Calories47"   "Calories48"   "Calories49"   "Calories50"   "Calories51"   "Calories52"   "Calories53"  
+[57] "Calories54"   "Calories55"   "Calories56"   "Calories57"   "Calories58"   "Calories59"  
 
-ActivityMinute - Date and time value in mm/dd/yyyy hh:mm:ss format.
-Calories - Total number of estimated calories burned.
+**Minute Calories (Narrow)**
+
+```r
+> colnames(minute_calories_narrow)
+[1] "Id"             "ActivityMinute" "Calories"
+```
+The wide version of the calories by minute table logs a row for each activity hour and then use the columns to represent calories burned in each specific minute of an hour. For example Calories00 would represent the calories burned in the first minute of the hour. I found this not to be ideal for understanding the data.
 
 ### DateTime
 
