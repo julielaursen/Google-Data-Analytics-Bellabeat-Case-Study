@@ -212,19 +212,40 @@ Dates were also inconsistent across tables. Before analysis, I also needed to co
 | Table                       | Date/Time Column | **Current Type** | **Needed Type** | Granularity | Value     |
 | --------------------------- | ---------------- | ---------------- | --------------- | ----------- | -----     |
 | `daily_activity`            | `ActivityDate`   | character        | Date            | Daily       | 4/12/2016 |
-| `daily_calories`            | `ActivityDay`    | character        |                 | Daily       | 4/12/2016 |
-| `daily_intensities`         | `ActivityDay`    | character        |                 | Daily       | 4/12/2016 |
-| `daily_steps`               | `ActivityDay`    | character        |                 | Daily       | 4/12/2016 | 
-| `daily_sleep`               | `SleepDay`       | character        |                 | Daily       | 4/12/2016 12:00:00 AM |
+| `daily_calories`            | `ActivityDay`    | character        | Date            | Daily       | 4/12/2016 |
+| `daily_intensities`         | `ActivityDay`    | character        | Date            | Daily       | 4/12/2016 |
+| `daily_steps`               | `ActivityDay`    | character        | Date            | Daily       | 4/12/2016 | 
+| `daily_sleep`               | `SleepDay`       | character        | Date            | Daily       | 4/12/2016 12:00:00 AM |
 | `hourly_calories`           | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
 | `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
 | `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
 | `minute_calories`           | `ActivityMinute` | character        |               | Minute      | 4/12/2016 12:00:00 AM |
 | `minute_intensities`        | `ActivityMinute` | character        |              | Minute      | 4/12/2016 12:00:00 AM |
 | `minute_METS`               | `ActivityMinute` | character        |                 | Minute      | 4/12/2016 12:00:00 AM |
-| `minute_sleep`              | `date`           | character          |           | Minute | "4/12/2016 2:47:30 AM"| 
+| `minute_sleep`              | `date`           | character          |           | Minute      | 4/12/2016 2:47:30 AM| 
 | `minute_steps`              | `ActivityMinute`           | character          |   | Minute      | 4/12/2016 12:00:00 AM |
 | `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      | 4/12/2016 7:21:00 AM  |
+
+To convert the MM/DD/YYYY columns from character to Date in the daily dataframes, I used the `lubridate` library to convert the dates to the correct format and then the class function to verify:
+
+```r
+daily_activity$ActivityDate <- mdy(daily_activity$ActivityDate)
+> class(daily_activity$ActivityDate)
+[1] "Date"
+> daily_calories$ActivityDay <- mdy(daily_calories$ActivityDay)
+> class(daily_calories$ActivityDay)
+[1] "Date"
+> daily_intensities$ActivityDay <- mdy(daily_intensities$ActivityDay)
+> class(daily_intensities$ActivityDay)
+[1] "Date
+> daily_steps$ActivityDay <- mdy(daily_steps$ActivityDay)
+> class(daily_steps$ActivityDay)
+[1] "Date"
+> daily_sleep$SleepDay <- mdy(daily_sleep$SleepDay)
+> class(daily_sleep$SleepDay)
+[1] "Date"
+```
+
 
 
 
