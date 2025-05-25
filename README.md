@@ -107,14 +107,8 @@ Yes, the summary of the dataset from the project states that there are 30 total 
 [1] 33
 > n_distinct(hourly_steps$Id)
 [1] 33
-> n_distinct(minute_calories_narrow$Id)
-[1] 33
-> n_distinct(minute_intensities_narrow$Id)
-[1] 33
 > n_distinct(minute_sleep$Id)
 [1] 24
-> n_distinct(minute_steps_narrow$Id)
-[1] 33
 > n_distinct(weightlog_info$Id)
 [1] 8
 ```
@@ -161,9 +155,6 @@ Dates were also inconsistent across tables. Before analysis, I also needed to co
 | `hourly_calories`           | `ActivityHour`   | character        | POSIXct         | Hourly      |
 | `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      |
 | `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      |
-| `minute_steps_narrow`       | `ActivityMinute` | character        | POSIXct         | Minute      |
-| `minute_calories_narrow`    | `ActivityMinute` | character        | POSIXct         | Minute      |
-| `minute_METS_narrow`        | `ActivityMinute` | character        | POSIXct         | Minute      |
 | `heartrate_seconds_merged`  | `Time`           | character        | POSIXct         | Second      |
 
 
