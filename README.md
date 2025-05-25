@@ -146,17 +146,19 @@ I then confirmed this by removing duplicates and comparing the rows before and a
 [1] 187978
 ```
 
-Dates were also inconsistent across tables. Before analysis, I also needed to conert these dates in date or character format to *date time* format and then spplit them to date and time separately.
+Dates were also inconsistent across tables. Before analysis, I also needed to conert these dates in date or character format to *date time* format and then split them to date and time separately.
 
-| Table                       | Date/Time Column | Type     | Time Granularity |
-| --------------------------- | ---------------- | --------------- | ---------------- |
-| `daily_activity`            | `ActivityDate`   | Date (`Date`)   | Daily            |
-| `hourly_calories`           | `ActivityHour`   | POSIX/character | Hourly           |
-| `hourly_steps`              | `ActivityHour`   | POSIX/character | Hourly           |
-| `hourly_intensities`        | `ActivityHour`   | POSIX/character | Hourly           |
-| `minute_intensities_narrow` | `ActivityMinute` | POSIX/character | Minute           |
-| `minute_steps_narrow`       | `ActivityMinute` | POSIX/character | Minute           |
-| `minute_calories_narrow`    | `ActivityMinute` | POSIX/character | Minute           |
-| `minute_METS_narrow`        | `ActivityMinute` | POSIX/character | Minute           |
-| `heartrate_seconds_merged`  | `Time`           | POSIX/character | Second           |
+| Table                       | Date/Time Column | **Current Type** | **Needed Type** | Granularity |
+| --------------------------- | ---------------- | ---------------- | --------------- | ----------- |
+| `daily_activity`            | `ActivityDate`   | character        | Date            | Daily       |
+| `hourly_calories`           | `ActivityHour`   | character        | POSIXct         | Hourly      |
+| `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      |
+| `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      |
+| `minute_steps_narrow`       | `ActivityMinute` | character        | POSIXct         | Minute      |
+| `minute_calories_narrow`    | `ActivityMinute` | character        | POSIXct         | Minute      |
+| `minute_METS_narrow`        | `ActivityMinute` | character        | POSIXct         | Minute      |
+| `heartrate_seconds_merged`  | `Time`           | character        | POSIXct         | Second      |
+
+
+
 
