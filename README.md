@@ -128,8 +128,14 @@ In minute_sleep there were 543 duplicate rows:
 > nrow(minute_sleep[duplicated(minute_sleep),])
 [1] 543
 ```
+In daily_sleep, there were 4 duplicate rows
 
-I then confirmed this by removing duplicates and comparing the rows before and after to ensure they equaled 543
+```
+> nrow(daily_sleep[duplicated(daily_sleep),])
+[1] 3
+```
+
+I then confirmed this by removing duplicates and comparing the rows before and after to ensure the number of rows subtracted was equal to the returned rows in the previous command.
 
 ```r
 > nrow(minute_sleep)
@@ -137,6 +143,12 @@ I then confirmed this by removing duplicates and comparing the rows before and a
 > minute_sleep_clean <- minute_sleep %>% distinct()
 > nrow(minute_sleep_clean)
 [1] 187978
+
+> nrow(daily_sleep)
+[1] 413
+> daily_sleep_clean <- daily_sleep %>% distinct()
+> nrow(daily_sleep_clean)
+[1] 410
 ```
 
 Dates were also inconsistent across tables. Before analysis, I also needed to conert these dates in date or character format to *date time* format and then split them to date and time separately.
