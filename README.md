@@ -76,7 +76,7 @@ To install the tidyverse package:
 To load the tidyverse package: 
   `library(tidyverse)`
 
-Then we read the data: 
+Then we read the data, changing each csv file into a data frame that we can execute commands against.
 
 ```r
 daily_activity <- read_csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv")
@@ -128,7 +128,23 @@ Yes, the summary of the dataset from the project states that there are 30 total 
 
 ## 2. Prepare
 
-I began cleaning the data so that the column names, type and format for date are consistent across tables.
+I began cleaning the data with several goals in mind. I wanted to eliminate duplication. I wanted to ensure that the column names, type and format for date are consistent across tables.
 
+In minute_sleep there were 543 duplicate rows:
+```r
+> nrow(minute_sleep[duplicated(minute_sleep),])
+[1] 543
+```
 
+I then confirmed this by removing duplicates and comparing the rows before and after to ensure they equaled 543
+
+```r
+> nrow(minute_sleep)
+[1] 188521
+> minute_sleep_clean <- minute_sleep %>% distinct()
+> nrow(minute_sleep_clean)
+[1] 187978
+```
+
+Dates were also inconsistent across tables. 
 
