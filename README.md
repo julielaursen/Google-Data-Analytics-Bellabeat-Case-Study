@@ -220,11 +220,12 @@ Dates were also inconsistent across tables. Before analysis, I also needed to co
 | `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      |
 | `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      |
 | `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      |
- `minute_calories`           
-minute_intensities
-minute_METs
-minute_sleep
-minute_steps
+| `minute_calories`           | `ActivityMinute` | character        | ||
+| `minute_intensities`        | `ActivityMinute` | character        | ||
+| `minute_METS`               | `ActivityMinute` | character        | | |
+| `minute_sleep`              | `date`           | character          |||
+| `minute_steps`              | `date`           | character          |||
+
 
 
 
