@@ -219,14 +219,14 @@ Dates were also inconsistent across tables. Before analysis, I also needed to co
 | `hourly_calories`           | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
 | `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
 | `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
-| `minute_calories`           | `ActivityMinute` | character        |               | Minute      | 4/12/2016 12:00:00 AM |
-| `minute_intensities`        | `ActivityMinute` | character        |              | Minute      | 4/12/2016 12:00:00 AM |
-| `minute_METS`               | `ActivityMinute` | character        |                 | Minute      | 4/12/2016 12:00:00 AM |
-| `minute_sleep`              | `date`           | character          |           | Minute      | 4/12/2016 2:47:30 AM| 
-| `minute_steps`              | `ActivityMinute`           | character          |   | Minute      | 4/12/2016 12:00:00 AM |
+| `minute_calories`           | `ActivityMinute` | character        |  POSIXct        | Minute      | 4/12/2016 12:00:00 AM |
+| `minute_intensities`        | `ActivityMinute` | character        | POSIXct         | Minute      | 4/12/2016 12:00:00 AM |
+| `minute_METS`               | `ActivityMinute` | character        | POSIXct         | Minute      | 4/12/2016 12:00:00 AM |
+| `minute_sleep`              | `date`           | character        | POSIXct         | Minute      | 4/12/2016 2:47:30 AM| 
+| `minute_steps`              | `ActivityMinute` | character        |   POSIXct       | Minute      | 4/12/2016 12:00:00 AM |
 | `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      | 4/12/2016 7:21:00 AM  |
 
-To convert the MM/DD/YYYY columns from character to Date in the daily dataframes, I used the `lubridate` library to convert the dates to the correct format and then the class function to verify:
+To convert the MM/DD/YYYY columns from character to Date in the daily dataframes, I used the `lubridate` library to convert the dates to the correct format and then the class function to verify. For time, I want to use POSIXct as it's easier to manipulate and run mathematical operations against.
 
 ```r
 daily_activity$ActivityDate <- mdy(daily_activity$ActivityDate)
