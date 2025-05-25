@@ -146,5 +146,17 @@ I then confirmed this by removing duplicates and comparing the rows before and a
 [1] 187978
 ```
 
-Dates were also inconsistent across tables. 
+Dates were also inconsistent across tables. Before analysis, I also needed to conert these dates in date or character format to *date time* format and then spplit them to date and time separately.
+
+| Table                       | Date/Time Column | Type     | Time Granularity |
+| --------------------------- | ---------------- | --------------- | ---------------- |
+| `daily_activity`            | `ActivityDate`   | Date (`Date`)   | Daily            |
+| `hourly_calories`           | `ActivityHour`   | POSIX/character | Hourly           |
+| `hourly_steps`              | `ActivityHour`   | POSIX/character | Hourly           |
+| `hourly_intensities`        | `ActivityHour`   | POSIX/character | Hourly           |
+| `minute_intensities_narrow` | `ActivityMinute` | POSIX/character | Minute           |
+| `minute_steps_narrow`       | `ActivityMinute` | POSIX/character | Minute           |
+| `minute_calories_narrow`    | `ActivityMinute` | POSIX/character | Minute           |
+| `minute_METS_narrow`        | `ActivityMinute` | POSIX/character | Minute           |
+| `heartrate_seconds_merged`  | `Time`           | POSIX/character | Second           |
 
