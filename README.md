@@ -99,23 +99,23 @@ Yes, the summary of the dataset from the project states that there are 30 total 
 ```r
 > n_distinct(daily_activity$Id)
 [1] 33
-> n_distinct(hourly_calories$Id)
+> n_distinct(daily_calories$Id)
 [1] 33
-> n_distinct(heartrate_seconds$Id)
-[1] 14
-> n_distinct(hourly_intensities$Id)
+> n_distinct(daily_intensities$Id)
 [1] 33
-> n_distinct(hourly_steps$Id)
+> n_distinct(daily_steps$Id)
 [1] 33
-> n_distinct(minute_sleep$Id)
+> n_distinct(daily_sleep$Id)
 [1] 24
-> n_distinct(weightlog_info$Id)
+> n_distinct(weight_log$Id)
 [1] 8
 ```
 
 ## 2. Prepare
 
 I began cleaning the data with several goals in mind. I wanted to eliminate duplication. I wanted to ensure that the column names, type and format for date are consistent across tables. As I cleaned the data, I also made sure the column names were lowercase and in snake case for consistency.
+
+### Duplication
 
 In minute_sleep there were 543 duplicate rows:
 ```r
@@ -146,6 +146,21 @@ I then confirmed this by removing duplicates and comparing the rows before and a
 > nrow(daily_sleep_clean)
 [1] 410
 ```
+
+### Formatting
+
+Daily tables of activity were in long format, but the data in csvs that calculated by minutes came in two different versions. There were tables in long format and tables in wide format. I found the tables in wide format difficult to read. For example,
+
+2.1.10 Minute Calories (Wide)
+
+ActivityHour - Date and hour value in mm/dd/yyyy hh:mm:ss format.
+Calories00 - Calories59 - Total number of estimated calories burned. Example: Calories05 = calories burned in fifth minute of the hour.
+2.1.11 Minute Calories (Narrow)
+
+ActivityMinute - Date and time value in mm/dd/yyyy hh:mm:ss format.
+Calories - Total number of estimated calories burned.
+
+### DateTime
 
 Dates were also inconsistent across tables. Before analysis, I also needed to conert these dates in date or character format to *date time* format and then split them to date and time separately.
 
