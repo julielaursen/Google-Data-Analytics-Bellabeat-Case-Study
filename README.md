@@ -209,17 +209,17 @@ The wide version of the calories by minute table logs a row for each activity ho
 
 Dates were also inconsistent across tables. Before analysis, I also needed to convert these dates in date or character format to *date time* format and then split them to date and time separately.
 
-| Table                       | Date/Time Column | **Current Type** | **Needed Type** | Granularity |
-| --------------------------- | ---------------- | ---------------- | --------------- | ----------- |
-| `daily_activity`            | `ActivityDate`   | character        | Date            | Daily       |
-| `daily_calories`            | `ActivityDay`    | character        |                 | Daily       | 
-| `daily_intensities`         | `ActivityDay`    | character        |                 | Daily       |
-| `daily_steps`               | `ActivityDay`    | character        |                 | Daily       | 
-| `daily_sleep`               | `SleepDay`       | character        |                 | Daily       | 
-| `hourly_calories`           | `ActivityHour`   | character        | POSIXct         | Hourly      |
-| `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      |
-| `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      |
-| `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      |
+| Table                       | Date/Time Column | **Current Type** | **Needed Type** | Granularity | Value     |
+| --------------------------- | ---------------- | ---------------- | --------------- | ----------- | -----     |
+| `daily_activity`            | `ActivityDate`   | character        | Date            | Daily       | 4/12/2016 |
+| `daily_calories`            | `ActivityDay`    | character        |                 | Daily       | 4/12/2016 |
+| `daily_intensities`         | `ActivityDay`    | character        |                 | Daily       | 4/12/2016 |
+| `daily_steps`               | `ActivityDay`    | character        |                 | Daily       | 4/12/2016 | 
+| `daily_sleep`               | `SleepDay`       | character        |                 | Daily       | 4/12/2016 12:00:00 AM |
+| `hourly_calories`           | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
+| `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
+| `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
+| `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      | 4/12/2016 7:21:00 AM  |
 | `minute_calories`           | `ActivityMinute` | character        | ||
 | `minute_intensities`        | `ActivityMinute` | character        | ||
 | `minute_METS`               | `ActivityMinute` | character        | | |
