@@ -201,15 +201,24 @@ rm(minute_calories_narrow)
 
 ### DateTime
 
-Dates were also inconsistent across tables. Before analysis, I also needed to conert these dates in date or character format to *date time* format and then split them to date and time separately.
+Dates were also inconsistent across tables. Before analysis, I also needed to convert these dates in date or character format to *date time* format and then split them to date and time separately.
 
 | Table                       | Date/Time Column | **Current Type** | **Needed Type** | Granularity |
 | --------------------------- | ---------------- | ---------------- | --------------- | ----------- |
 | `daily_activity`            | `ActivityDate`   | character        | Date            | Daily       |
+| `daily_calories`            | `ActivityDay`    | character        |                 | Daily       | 
+| `daily_intensities`         | `ActivityDay`    | character        |                 | Daily       |
+| `daily_steps`               | `ActivityDay`    | character        |                 | Daily       | 
+| `daily_sleep`               | `SleepDay`       | character        |                 | Daily       | 
 | `hourly_calories`           | `ActivityHour`   | character        | POSIXct         | Hourly      |
 | `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      |
 | `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      |
-| `heartrate_seconds_merged`  | `Time`           | character        | POSIXct         | Second      |
+| `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      |
+ `minute_calories`           
+minute_intensities
+minute_METs
+minute_sleep
+minute_steps
 
 
 
