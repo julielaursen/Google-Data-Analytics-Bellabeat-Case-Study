@@ -92,6 +92,8 @@ The data is organized in two different folders, one for the period of `3/12/16-4
   
 #### How does it help you answer your question?
 
+The data provides insights into users’ daily habits related to physical activity, heart rate, and sleep patterns. These insights are crucial for understanding trends and behaviors in smart device usage, which can inform Bellabeat’s marketing strategies and product improvements.
+
 #### Are there any problems with the data?
 
 Yes, the summary of the dataset from the project states that there are 30 total users in the dataset. However, there are 33 people tracking their daily activity and the people who are tracking their activity are not also consistently tracking other metrics. Heartrate seconds, minutes slept, and weightlog are being tracked by less than the statistically significiant amount of people to form a valid sample. For this reason, we are eliminating some data such as weight tracking from our analysis.
@@ -115,7 +117,26 @@ Yes, the summary of the dataset from the project states that there are 30 total 
 
 I began cleaning the data with several goals in mind. I wanted to eliminate duplication. I wanted to ensure that the column names, type and format for date are consistent across tables. As I cleaned the data, I also made sure the column names were lowercase and in snake case for consistency.
 
-### Duplication
+The tables I am analyzing after renaming:
+
+```r
+daily_activity
+daily_calories
+daily_intensities
+daily_steps
+daily_sleep
+hourly_calories
+hourly_intensities
+hourly_steps
+minute_calories
+minute_intensities
+minute_METs
+minute_sleep
+minute_steps
+heartrate_seconds
+```
+
+### Duplication and Null Rows
 
 In minute_sleep there were 543 duplicate rows:
 ```r
@@ -171,7 +192,12 @@ Daily tables of activity were in long format, but the data in csvs that calculat
 > colnames(minute_calories_narrow)
 [1] "Id"             "ActivityMinute" "Calories"
 ```
-The wide version of the calories by minute table logs a row for each activity hour and then use the columns to represent calories burned in each specific minute of an hour. For example Calories00 would represent the calories burned in the first minute of the hour. I found this not to be ideal for understanding the data.
+The wide version of the calories by minute table logs a row for each activity hour and then use the columns to represent calories burned in each specific minute of an hour. For example Calories00 would represent the calories burned in the first minute of the hour. I found this not to be ideal for understanding the data, so I renamed each file from `minute_value_narrow` to `minute_value` and ignored the files `minute_value_wide` except for comparison value.
+
+```r
+minute_calories <- minute_calories_narrow
+rm(minute_calories_narrow)
+```
 
 ### DateTime
 
