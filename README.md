@@ -129,7 +129,7 @@ In minute_sleep there were 543 duplicate rows:
 [1] 543
 ```
 
-In daily_Sleep there were 3 duplicate rows:
+In daily_sleep there were 3 duplicate rows:
 ```r
 > nrow(daily_sleep[duplicated(daily_sleep),])
 [1] 3
