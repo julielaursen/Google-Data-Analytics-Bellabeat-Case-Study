@@ -195,8 +195,14 @@ Daily tables of activity were in long format, but the data in csvs that calculat
 The wide version of the calories by minute table logs a row for each activity hour and then use the columns to represent calories burned in each specific minute of an hour. For example Calories00 would represent the calories burned in the first minute of the hour. I found this not to be ideal for understanding the data, so I renamed each file from `minute_value_narrow` to `minute_value` and ignored the files `minute_value_wide` except for comparison value.
 
 ```r
-minute_calories <- minute_calories_narrow
-rm(minute_calories_narrow)
+> minute_calories <- minute_calories_narrow
+> rm(minute_calories_narrow)
+> minute_intensities <- minute_intensities_narrow
+> rm(minute_intensities_narrow)
+> minute_METS <- minute_METS_narrow
+> rm(minute_METS_narrow)
+> minute_steps <- minute_steps_narrow
+> rm(minute_steps_narrow)
 ```
 
 ### DateTime
