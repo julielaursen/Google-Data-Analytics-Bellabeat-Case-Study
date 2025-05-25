@@ -219,12 +219,13 @@ Dates were also inconsistent across tables. Before analysis, I also needed to co
 | `hourly_calories`           | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
 | `hourly_steps`              | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
 | `hourly_intensities`        | `ActivityHour`   | character        | POSIXct         | Hourly      | 4/12/2016 12:00:00 AM |
-| `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      | 4/12/2016 7:21:00 AM  |
 | `minute_calories`           | `ActivityMinute` | character        |               | Minute      | 4/12/2016 12:00:00 AM |
 | `minute_intensities`        | `ActivityMinute` | character        |              | Minute      | 4/12/2016 12:00:00 AM |
 | `minute_METS`               | `ActivityMinute` | character        |                 | Minute      | 4/12/2016 12:00:00 AM |
 | `minute_sleep`              | `date`           | character          |           | Minute | "4/12/2016 2:47:30 AM"| 
 | `minute_steps`              | `ActivityMinute`           | character          |   | Minute      | 4/12/2016 12:00:00 AM |
+| `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      | 4/12/2016 7:21:00 AM  |
+
 
 
 
