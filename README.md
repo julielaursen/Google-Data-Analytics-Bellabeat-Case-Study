@@ -245,7 +245,15 @@ daily_activity$ActivityDate <- mdy(daily_activity$ActivityDate)
 > class(daily_sleep$SleepDay)
 [1] "Date"
 ```
+Then I renamed the date columns to always be `ActivityDate`
 
+```r
+> daily_calories <- daily_calories %>% rename(ActivityDate = ActivityDay)
+> daily_intensities <- daily_intensities %>% rename(ActivityDate = ActivityDay)
+> daily_steps <- daily_steps %>% rename(ActivityDate = ActivityDay)
+> daily_sleep <- daily_sleep %>% rename(ActivityDate = SleepDay)
+
+```
 
 
 
