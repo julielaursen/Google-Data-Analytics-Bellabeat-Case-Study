@@ -273,9 +273,17 @@ For non-daily tables, I converted the date to POSIXct and renamed the column to 
 [1] "POSIXct" "POSIXt"
 ```
 
-**To-DO: we need to do the conversions for daily_sleep and minute_sleep_CLEAN**
-
 Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. 
+
+**TO-DO**
+
+daily_sleep and minute_sleep was also not easily able to be formatted
+
+```r
+> daily_sleep_clean$SleepDay <- mdy(daily_sleep_clean$SleepDay)
+Warning message:
+All formats failed to parse. No formats found.
+```
 
 
 
