@@ -128,14 +128,14 @@ In minute_sleep there were 543 duplicate rows:
 > nrow(minute_sleep[duplicated(minute_sleep),])
 [1] 543
 ```
-In daily_sleep, there were 4 duplicate rows
 
-```
+In daily_Sleep there were 3 duplicate rows:
+```r
 > nrow(daily_sleep[duplicated(daily_sleep),])
 [1] 3
 ```
 
-I then confirmed this by removing duplicates and comparing the rows before and after to ensure the number of rows subtracted was equal to the returned rows in the previous command.
+I then confirmed this by removing duplicates and comparing the rows before and after to ensure the number of rows subtracted equaled the number of rows returned in the previous command
 
 ```r
 > nrow(minute_sleep)
@@ -143,7 +143,9 @@ I then confirmed this by removing duplicates and comparing the rows before and a
 > minute_sleep_clean <- minute_sleep %>% distinct()
 > nrow(minute_sleep_clean)
 [1] 187978
+```
 
+```r
 > nrow(daily_sleep)
 [1] 413
 > daily_sleep_clean <- daily_sleep %>% distinct()
