@@ -153,6 +153,7 @@ Daily tables of activity were in long format, but the data in csvs that calculat
 
 **Minute Calories (Wide)**
 
+```r
 > colnames(minute_calories_wide)
  [1] "Id"           "ActivityHour" "Calories00"   "Calories01"   "Calories02"   "Calories03"   "Calories04"   "Calories05"  
  [9] "Calories06"   "Calories07"   "Calories08"   "Calories09"   "Calories10"   "Calories11"   "Calories12"   "Calories13"  
@@ -161,7 +162,8 @@ Daily tables of activity were in long format, but the data in csvs that calculat
 [33] "Calories30"   "Calories31"   "Calories32"   "Calories33"   "Calories34"   "Calories35"   "Calories36"   "Calories37"  
 [41] "Calories38"   "Calories39"   "Calories40"   "Calories41"   "Calories42"   "Calories43"   "Calories44"   "Calories45"  
 [49] "Calories46"   "Calories47"   "Calories48"   "Calories49"   "Calories50"   "Calories51"   "Calories52"   "Calories53"  
-[57] "Calories54"   "Calories55"   "Calories56"   "Calories57"   "Calories58"   "Calories59"  
+[57] "Calories54"   "Calories55"   "Calories56"   "Calories57"   "Calories58"   "Calories59"
+```
 
 **Minute Calories (Narrow)**
 
