@@ -207,7 +207,7 @@ The wide version of the calories by minute table logs a row for each activity ho
 
 ### DateTime
 
-Dates were also inconsistent across tables. Before analysis, I also needed to convert these dates in date or character format to *date time* format and then split them to date and time separately.
+Dates were also inconsistent across tables. Before analysis, I also needed to convert these dates in date or character format to *date time* format.
 
 | Table                       | Date/Time Column | **Current Type** | **Needed Type** | Granularity | Value     |
 | --------------------------- | ---------------- | ---------------- | --------------- | ----------- | -----     |
@@ -222,8 +222,8 @@ Dates were also inconsistent across tables. Before analysis, I also needed to co
 | `minute_calories`           | `ActivityMinute` | character        |  POSIXct        | Minute      | 4/12/2016 12:00:00 AM |
 | `minute_intensities`        | `ActivityMinute` | character        | POSIXct         | Minute      | 4/12/2016 12:00:00 AM |
 | `minute_METS`               | `ActivityMinute` | character        | POSIXct         | Minute      | 4/12/2016 12:00:00 AM |
-| `minute_sleep`              | `date`           | character        | POSIXct         | Minute      | 4/12/2016 2:47:30 AM| 
-| `minute_steps`              | `ActivityMinute` | character        |   POSIXct       | Minute      | 4/12/2016 12:00:00 AM |
+| `minute_sleep`              | `date`           | character        | POSIXct         | Minute      | 4/12/2016 2:47:30 AM  | 
+| `minute_steps`              | `ActivityMinute` | character        | POSIXct         | Minute      | 4/12/2016 12:00:00 AM |
 | `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      | 4/12/2016 7:21:00 AM  |
 
 To convert the MM/DD/YYYY columns from character to Date in the daily dataframes, I used the `lubridate` library to convert the dates to the correct format and then the class function to verify. For time, I want to use POSIXct as it's easier to manipulate and run mathematical operations against.
@@ -252,7 +252,25 @@ Then I renamed the date columns to always be `ActivityDate`
 > daily_intensities <- daily_intensities %>% rename(ActivityDate = ActivityDay)
 > daily_steps <- daily_steps %>% rename(ActivityDate = ActivityDay)
 > daily_sleep <- daily_sleep %>% rename(ActivityDate = SleepDay)
+```
 
+For non-daily tables, I converted the date to POSIXct and renamed the column to `ActivityDate`
+
+```r
+> hourly_calories <- hourly_calories %>% 
++     rename(ActivityDate = ActivityHour) %>%  # rename column to something clean
++     mutate(
++         ActivityDate = as.POSIXct(
++             ActivityDate,
++             format = "%m/%d/%Y %I:%M:%S %p",  # match "4/12/2016 12:00:00 AM"
++             tz = Sys.timezone()              # set local time zone
++         )
++     )
+> 
+> 
+> View(hourly_calories)
+> class(hourly_calories$ActivityDate)
+[1] "POSIXct" "POSIXt"
 ```
 
 
