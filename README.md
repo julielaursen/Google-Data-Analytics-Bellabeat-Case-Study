@@ -115,7 +115,7 @@ Yes, the summary of the dataset from the project states that there are 30 total 
 
 ## 2. Prepare
 
-I began cleaning the data with several goals in mind. I wanted to eliminate duplication. I wanted to ensure that the column names, type and format for date are consistent across tables.
+I began cleaning the data with several goals in mind. I wanted to eliminate duplication. I wanted to ensure that the column names, type and format for date are consistent across tables. As I cleaned the data, I also made sure the column names were lowercase and in snake case for consistency.
 
 In minute_sleep there were 543 duplicate rows:
 ```r
