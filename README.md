@@ -113,7 +113,7 @@ Yes, the summary of the dataset from the project states that there are 30 total 
 [1] 8
 ```
 
-## 🔁  Process
+## 🧹 Process
 
 I began cleaning the data with several goals in mind. I wanted to eliminate duplication and null values. I wanted to ensure that the column names, type and format for date are consistent across tables. As I cleaned the data, I also made sure the column names were lowercase and in snake case for consistency.
 
@@ -168,7 +168,7 @@ I then confirmed this by removing duplicates and comparing the rows before and a
 [1] 410
 ```
 
-### Formatting
+### 🖋️ Formatting
 
 Daily tables of activity were in long format, but the data in csvs that calculated by minutes came in two different versions. There were tables in long format and tables in wide format. I found the tables in wide format difficult to read. For example,
 
@@ -307,6 +307,15 @@ hourly_calories <- hourly_calories %>%
 > range(minute_calories$ActivityDate)
 [1] "2016-04-12 CDT" "2016-05-12 CDT"
 ....
+```
+
+I also added in the day of the week as a new column, ex)
+
+```r
+> daily_calories$DayOfWeek <- weekdays(daily_calories$ActivityDate)
+> 
+> colnames(daily_calories)
+[1] "Id"           "ActivityDate" "Calories"     "DayOfWeek"
 ```
 
 
