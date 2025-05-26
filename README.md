@@ -273,7 +273,7 @@ For non-daily tables, I converted the date to POSIXct and renamed the column to 
 [1] "POSIXct" "POSIXt"
 ```
 
-Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 5/12/16 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. daily_sleep also ends at 00:00:00 or midnight the night before. 
+Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 5/12/16 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. daily_sleep also ends at 00:00:00 or midnight the night before and minute_sleep starts at 4/11/2016 20:48 adn ends at 5/12/00 at 9:56.
 
 **To Note**
 
