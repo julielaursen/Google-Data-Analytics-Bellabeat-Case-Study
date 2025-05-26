@@ -607,3 +607,89 @@ I also discovered that while most users have a single sleep session per day, a s
 
 I did not eliminate users with `TotalSleepRecords > 1` however, as these could be shift workers, people who take naps, or people who frequently wake up in the night.
 
+### 🧩 Other Outliers
+
+There are potential outliers in the table for heartrate data that may be outliers:
+
+```r
+> heartrate_seconds %>%
++     filter(Value < 40) %>%
++     print(n = Inf)
+# A tibble: 23 × 4
+           Id ActivityDate        Value DayOfWeek
+        <dbl> <dttm>              <dbl> <chr>    
+ 1 2022484408 2016-04-27 13:47:00    38 Wednesday
+ 2 2022484408 2016-04-27 13:47:15    38 Wednesday
+ 3 2022484408 2016-04-27 13:47:20    39 Wednesday
+ 4 2022484408 2016-04-27 13:47:35    39 Wednesday
+ 5 2022484408 2016-04-27 13:47:50    39 Wednesday
+ 6 2022484408 2016-04-27 13:48:35    39 Wednesday
+ 7 4388161847 2016-05-01 04:09:30    39 Sunday   
+ 8 5577150313 2016-04-15 03:57:40    39 Friday   
+ 9 5577150313 2016-04-15 03:57:50    39 Friday   
+10 5577150313 2016-04-15 03:58:05    39 Friday   
+11 5577150313 2016-04-15 03:58:20    39 Friday   
+12 5577150313 2016-04-15 03:58:35    39 Friday   
+13 5577150313 2016-04-15 03:59:10    39 Friday   
+14 5577150313 2016-05-04 02:00:00    38 Wednesday
+15 5577150313 2016-05-04 02:00:10    36 Wednesday
+16 5577150313 2016-05-04 02:00:20    36 Wednesday
+17 5577150313 2016-05-04 02:00:35    37 Wednesday
+18 5577150313 2016-05-04 02:00:50    37 Wednesday
+19 5577150313 2016-05-04 07:41:10    39 Wednesday
+20 5577150313 2016-05-04 07:41:20    38 Wednesday
+21 5577150313 2016-05-04 07:41:30    39 Wednesday
+22 5577150313 2016-05-04 07:41:45    39 Wednesday
+23 5577150313 2016-05-04 18:48:20    39 Wednesday
+
+> heartrate_seconds %>%
++     filter(Value > 200) %>%
++     print(n = Inf)
+# A tibble: 13 × 4
+           Id ActivityDate        Value DayOfWeek
+        <dbl> <dttm>              <dbl> <chr>    
+ 1 2022484408 2016-04-21 16:31:30   202 Thursday 
+ 2 2022484408 2016-04-21 16:31:40   203 Thursday 
+ 3 2022484408 2016-04-21 16:31:50   202 Thursday 
+ 4 2022484408 2016-04-21 16:32:00   203 Thursday 
+ 5 2022484408 2016-04-21 16:32:10   203 Thursday 
+ 6 2022484408 2016-04-21 16:32:20   203 Thursday 
+ 7 2022484408 2016-04-21 16:32:35   203 Thursday 
+ 8 2022484408 2016-04-21 16:32:40   201 Thursday 
+ 9 2022484408 2016-04-21 17:05:40   202 Thursday 
+10 2022484408 2016-04-21 17:05:50   203 Thursday 
+11 2022484408 2016-04-21 17:06:05   203 Thursday 
+12 2022484408 2016-04-21 17:06:20   203 Thursday 
+13 2022484408 2016-04-21 17:06:30   202 Thursday 
+```
+
+### 🫀 Heart Rate Outliers — Validity Summary
+
+| **Condition / Scenario**                      | **Physiologically Valid?** | **Explanation**                                                                 |
+|----------------------------------------------|-----------------------------|---------------------------------------------------------------------------------|
+| **Elite endurance athlete at rest**           | ✅ Yes                      | Well-trained athletes may have resting HRs in the 30s                          |
+| **Deep sleep or REM sleep**                   | ✅ Yes                      | HR can dip below 40 during restorative sleep phases                           |
+| **Meditation or extreme relaxation**          | ✅ Yes                      | Deep parasympathetic activation may lower HR temporarily                      |
+| **Beta-blocker or sedative medication use**   | ✅ Yes                      | Certain medications suppress heart rate                                       |
+| **Cardiac bradycardia (clinical diagnosis)**  | ❌ Caution                  | May indicate underlying health issues; not valid for general population       |
+| **Wearable/device misreading**                | ❌ No                       | Poor skin contact or optical noise may result in implausibly low readings     |
+| **Data dropout or signal error**              | ❌ No                       | Gaps or sensor shifts can create fake dips in recorded HR                     |
+| **High-intensity exercise (young athlete)**   | ✅ Yes                      | Trained individuals under 20 may exceed 200 BPM briefly                       |
+| **VO2 max testing or all-out sprint**         | ✅ Yes                      | Max effort during lab testing or track sprint may push HR over 200 BPM        |
+| **Children / teens at play**                  | ✅ Yes                      | Young people can reach HR > 200 naturally without harm                        |
+| **Wearable/device spike artifact**            | ❌ No                       | Sudden jump to 230–250 for 1 reading is usually an error                      |
+| **Cardiac arrhythmia or SVT**                 | ❌ Caution                  | Dangerous HR spikes may reflect a medical condition, not valid exercise data  |
+
+Based on the results, we should be careful with the data from users `5577150313` and `2022484408`. It is possible that user `5577150313` is a well-trained athlete and this should correlate with other data from other data frames, such as a high activity count. We should also be careful with user `2022484408` who matched **both** conditions of a heartrate under 40 and over 200 in the same dataframe. 
+
+We should also consider user `4388161847` an outlier as there is a single data point for that user's heartrate dipping below 40. The mean heartrate for this user is `66.2` so this is probably a device error. I removed this row from the table and then confirmed the removal.
+
+```r
+> heartrate_seconds <- heartrate_seconds %>%
++     filter(!(Id == 4388161847 & Value == 39))
+```
+
+
+## 📊 Analyze
+
+
