@@ -748,4 +748,15 @@ daily_activity_clean <- daily_activity_clean %>%
 
 ## 📊 Analyze
 
+I decided to merge the `sleep` and `steps` daily tables with the `daily activity` table to give a comprehensive overview of each individual's ActivityDate. I removed the DayOfWeek column from the tables merged in so it wouldn't create redundant columns and then used an inner join to join the other two tables to daily_activity
+
+```r
+> daily_merged <- daily_activity_clean %>%
++     inner_join(daily_sleep_clean, by = c("Id", "ActivityDate")) %>%
++     inner_join(daily_steps_clean, by = c("Id", "ActivityDate"))
+```
+
+The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
+
+![image](https://github.com/user-attachments/assets/e0773b68-900b-4a3d-8602-dcdf0269eb00)
 
