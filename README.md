@@ -180,7 +180,7 @@ Although I've checked for null and empty rows, I also want to check for rows whe
 # A tibble: 77 × 16
 ```
 
-Then, I remove the 77 rows of data where TotalSteps == 0 and confirm the new number of rows is the subtracted zero rows.
+Then, I remove the 77 rows of data where `TotalSteps == 0` and confirm the new number of rows is the subtracted zero rows.
 
 ```r
 > daily_activity <- daily_activity %>% filter(TotalSteps !=0)
@@ -189,7 +189,7 @@ Then, I remove the 77 rows of data where TotalSteps == 0 and confirm the new num
 [1] 863
 ```
 
-I then repeat this for rows where TotalDistance is 0, removing one more row in the `daily_activity` table, and I begin filtering other 0 values in other tables:
+I then repeat this for rows where `TotalDistance` is 0, removing one more row in the `daily_activity` table, and I begin filtering other 0 values in other tables:
 
 ```r
 > daily_calories <- daily_calories %>% filter (Calories !=0)
@@ -271,7 +271,7 @@ Dates were also inconsistent across tables. Before analysis, I also needed to co
 | `minute_steps`              | `ActivityMinute` | character        | POSIXct         | Minute      | 4/12/2016 12:00:00 AM |
 | `heartrate_seconds`         | `Time`           | character        | POSIXct         | Second      | 4/12/2016 7:21:00 AM  |
 
-To convert the MM/DD/YYYY columns from character to Date in the daily dataframes, I used the `lubridate` library to convert the dates to the correct format and then the class function to verify. For time, I want to use POSIXct as it's easier to manipulate and run mathematical operations against.
+To convert the MM/DD/YYYY columns from character to Date in the daily dataframes, I used the `lubridate` library to convert the dates to the correct format and then the class function to verify. For time, I want to use `POSIXct` as it's easier to manipulate and run mathematical operations against.
 
 ```r
 daily_activity$ActivityDate <- mdy(daily_activity$ActivityDate)
@@ -365,11 +365,11 @@ I also added in the day of the week as a new column, ex)
 
 ### 🧩 Incomplete Data
 
-Based on our analysis of the timeseries data, there are 31 total days where users could have been logging information. However, analyzing the daily_activity log, we only have 20 users who have logged 30 or 31 days of data.
+Based on our analysis of the timeseries data, there are 31 total days where users could have been logging information. However, analyzing the `daily_activity` log, we only have 20 users who have logged 30 or 31 days of data.
 
 **Daily Activity:**
 
-Only 20 users had 30 or more days of activity logged. As user 4057192912 has only logged 3 activites after cleaning, I considered this user an outlier and I have removed this user from the data frame.
+Only 20 users had 30 or more days of activity logged. As user `4057192912` has only logged 3 activites after cleaning, I considered this user an outlier and I have removed this user from the data frame.
 
 ```r
 > daily_activity %>%
@@ -418,7 +418,7 @@ daily_activity <- daily_activity %>%
 
 **Daily Calories:**
 
-In daily calories, 20 users also logged 30 or more days. Again, user 4057192912 was removed from the data frame.
+In daily calories, 20 users also logged 30 or more days. Again, user `4057192912` was removed from the data frame.
 
 ```r
 > view(daily_calories)
@@ -469,7 +469,7 @@ In daily calories, 20 users also logged 30 or more days. Again, user 4057192912 
 ```
 
 **Daily Intensities:**
-In daily intensities, more users have logging information. 24 users total have 30+ days logged. User 4057192912 was removed from the data frame.
+In daily intensities, more users have logging information. 24 users total have 30+ days logged. User `4057192912` was removed from the data frame.
 
 ```r
 > daily_intensities %>%
@@ -519,7 +519,7 @@ In daily intensities, more users have logging information. 24 users total have 3
 ```
 
 **Daily steps:**
-24 users have 30+ days logged n daily steps. Again, user 4057192912 was removed from the data frame.
+24 users have 30+ days logged n daily steps. Again, user `4057192912` was removed from the data frame.
 
 ```r
  daily_steps %>%
