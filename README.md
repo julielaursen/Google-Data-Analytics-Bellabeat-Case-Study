@@ -273,14 +273,65 @@ For non-daily tables, I converted the date to POSIXct and renamed the column to 
 [1] "POSIXct" "POSIXt"
 ```
 
-Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 5/12/16 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. daily_sleep also ends at 00:00:00 or midnight the night before and minute_sleep starts at 4/11/2016 20:48 adn ends at 5/12/00 at 9:56.
+Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 5/12/16 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. daily_sleep also ends at 00:00:00 or midnight the night before and minute_sleep starts at 4/11/2016 20:48 and ends at 5/12/2016 at 9:56.
 
 **To Note**
 
 daily_sleep has the ActivityDate of midnight which equates to 00:00:00. Since all zeros do not show, it looks as if the time is not included in the date, but `table(format(daily_sleep_clean$SleepDay, "%H:%M:%S"))` proves it's there.
 
+Making all the ranges cover the same amount of time, using the dates of midnight on the start day to midnights on the end day, similar to the sleep tables.
 
+```r
+hourly_calories <- hourly_calories %>%
+  filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
+         ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
+> range(hourly_calories$ActivityDate)
+[1] "2016-04-12 CDT" "2016-05-12 CDT"
 
+> hourly_steps <- hourly_steps %>%
++     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
++            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
+> range(hourly_steps$ActivityDate)
+[1] "2016-04-12 CDT" "2016-05-12 CDT"
+
+> hourly_intensities <- hourly_intensities %>%
++     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
++            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
+> range(hourly_intensities$ActivityDate)
+[1] "2016-04-12 CDT" "2016-05-12 CDT"
+
+> minute_calories <- minute_calories %>%
++     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
++            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
+> 
+> range(minute_calories$ActivityDate)
+[1] "2016-04-12 CDT" "2016-05-12 CDT"
+
+minute_intensities <- minute_intensities %>%
+  filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
+         ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
+> range(minute_intensities$ActivityDate)
+[1] "2016-04-12 CDT" "2016-05-12 CDT"
+
+> minute_METS <- minute_METS %>%
++     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
++            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
+> 
+> range(minute_METS$ActivityDate)
+[1] "2016-04-12 CDT" "2016-05-12 CDT"
+
+> minute_steps <- minute_steps %>%
++     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
++            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
+> 
+> range(minute_steps$ActivityDate)
+[1] "2016-04-12 CDT" "2016-05-12 CDT"
+
+> heartrate_seconds <- heartrate_seconds %>%
++     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
++            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
+> 
+> range(heartrate_seconds$ActivityDate)
 
 
 
