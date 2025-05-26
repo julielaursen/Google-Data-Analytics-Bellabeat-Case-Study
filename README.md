@@ -748,12 +748,33 @@ daily_activity_clean <- daily_activity_clean %>%
 
 ## 📊 Analyze
 
-I decided to merge the `sleep` and `steps` daily tables with the `daily activity` table to give a comprehensive overview of each individual's ActivityDate. I removed the DayOfWeek column from the tables merged in so it wouldn't create redundant columns and then used an inner join to join the other two tables to daily_activity
+I decided to merge the `sleep` daily table with the `daily activity` table to give a comprehensive overview of each individual's activity and sleep patterns by ActivityDate. I removed the DayOfWeek column from the tables merged in so it wouldn't create redundant columns and then used an inner join to join the other two tables to daily_activity
 
 ```r
 > daily_merged <- daily_activity_clean %>%
 +     inner_join(daily_sleep_clean, by = c("Id", "ActivityDate")) %>%
-+     inner_join(daily_steps_clean, by = c("Id", "ActivityDate"))
+```
+
+### Min, Med, Mean, and Max
+
+```r
+daily_merged %>%
++     select(TotalSteps, TotalDistance, VeryActiveMinutes, FairlyActiveMinutes, LightlyActiveMinutes, SedentaryMinutes, Calories, TotalMinutesAsleep, TotalTimeInBed ) %>%
++     summary()
+   TotalSteps    TotalDistance    VeryActiveMinutes FairlyActiveMinutes LightlyActiveMinutes SedentaryMinutes
+ Min.   :   17   Min.   : 0.010   Min.   :  0.00    Min.   :  0.00      Min.   :  2.0        Min.   :   0.0  
+ 1st Qu.: 5206   1st Qu.: 3.600   1st Qu.:  0.00    1st Qu.:  0.00      1st Qu.:158.0        1st Qu.: 631.0  
+ Median : 8925   Median : 6.290   Median :  9.00    Median : 11.00      Median :208.0        Median : 717.0  
+ Mean   : 8541   Mean   : 6.039   Mean   : 25.19    Mean   : 18.04      Mean   :216.9        Mean   : 712.2  
+ 3rd Qu.:11393   3rd Qu.: 8.030   3rd Qu.: 38.00    3rd Qu.: 27.00      3rd Qu.:263.0        3rd Qu.: 783.0  
+ Max.   :22770   Max.   :17.540   Max.   :210.00    Max.   :143.00      Max.   :518.0        Max.   :1265.0  
+    Calories    TotalMinutesAsleep TotalTimeInBed 
+ Min.   :1141   Min.   : 58.0      Min.   : 61.0  
+ 1st Qu.:1861   1st Qu.:361.0      1st Qu.:403.0  
+ Median :2220   Median :433.0      Median :463.0  
+ Mean   :2411   Mean   :419.5      Mean   :458.6  
+ 3rd Qu.:2926   3rd Qu.:490.0      3rd Qu.:526.0  
+ Max.   :4900   Max.   :796.0      Max.   :961.0
 ```
 
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
