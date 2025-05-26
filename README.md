@@ -196,7 +196,22 @@ I then repeat this for rows where TotalDistance is 0, removing one more row in t
 ```
 removes 4 rows
 
+Duplicate columns are also a potential problem, as both Daily Activity and Daily Calories includes a column for Calories:
 
+```r
+> colnames(daily_activity)
+ [1] "Id"                       "ActivityDate"            
+ [3] "TotalSteps"               "TotalDistance"           
+ [5] "TrackerDistance"          "LoggedActivitiesDistance"
+ [7] "VeryActiveDistance"       "ModeratelyActiveDistance"
+ [9] "LightActiveDistance"      "SedentaryActiveDistance" 
+[11] "VeryActiveMinutes"        "FairlyActiveMinutes"     
+[13] "LightlyActiveMinutes"     "SedentaryMinutes"        
+[15] "Calories"                 "DayOfWeek"
+
+> colnames(daily_calories)
+[1] "Id"           "ActivityDate" "Calories"     "DayOfWeek"
+```
 
 ### 🖋️ Formatting
 
@@ -552,3 +567,5 @@ In daily intensities, more users have logging information. 24 users total have 3
 > daily_steps <- daily_steps %>%
 +     filter(Id != 4057192912)
 ```
+
+
