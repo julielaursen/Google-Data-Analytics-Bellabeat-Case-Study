@@ -15,7 +15,7 @@ _The case study follows the six step data analysis process:_
 ## Scenario
 Bellabeat is a small high-tech company that manufactures health-focused smart products. Since it was founded in 2013 by Urška Sršen and Sando Mur, Bellabeat has opened offices around the world and now has the potential to become a larger player in the global smart device market. The company has 5 focus products at the time of this analysis: bellabeat app, leaf, time, spring, and bellabeat membership. 
 
-## 1. Ask
+## 1. ❓ Ask
 💡 BUSINESS TASK: Our team has been asked to analyze smart device data to gain insight into consumer behavior trends. The insights we discover will then help guide marketing strategy for the company. 
 
 Specifically, our team needs to answer:
@@ -27,7 +27,7 @@ Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
 
 Secondary stakeholders: Bellabeat marketing analytics team.
 
-## 2. Prepare 
+## 2. 💻 Prepare 
 This data was sourced from FitBit Fitness Tracker Data and made available by the user Möbius on Kaggle at https://www.kaggle.com/arashnic/fitbit. This is a public dataset. Kaggle is a platform for data science and machine learning projects.
 
 ## ROCCC Analysis of Dataset
@@ -61,7 +61,7 @@ This data was sourced from FitBit Fitness Tracker Data and made available by the
 
 To begin the analysis, we load all the required R packages in https://github.com/julielaursen/r-fitbit-data. These package are used for data cleaning, manipulation, visualization, and time/date processing. 
 
-### Packages used in this project:
+### 📦 Packages used in this project:
 - `tidyverse`: a collection of R packages for data science, including:
   - `dplyr`: For data wrangling and transformation
   - `ggplot2`: For visualizing trends and patterns
@@ -86,15 +86,15 @@ hourly_calories <- read_csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.
 
 ```
 
-#### How is the data organized?
+#### 🗂️ How is the data organized?
 
 The data is organized in two different folders, one for the period of `3/12/16-4/11/16` and one for `4/12/16-5/12/16`. Although this data is supposed to be continuous, it seems that data from folder1 is incomplete. On inspection, the range of dates often stop at 4/9 which would leave a noticeable 3 day gap between the two data collections. There are also a different number of users in the dataset. For example, 35 users recorded daily activity in the first data set and only 3 in the second dataset. It seems that the user with ID `2891001357` and ID `6391747486` may have dropped out of the study between the first and second dataset. Therefore, we are only focusing on the second dataset as it is more complete.
   
-#### How does it help you answer your question?
+#### ❓ How does it help you answer your question?
 
 The data provides insights into users’ daily habits related to physical activity, heart rate, and sleep patterns. These insights are crucial for understanding trends and behaviors in smart device usage, which can inform Bellabeat’s marketing strategies and product improvements.
 
-#### Are there any problems with the data?
+#### 🚩 Are there any problems with the data?
 
 Yes, the summary of the dataset from the project states that there are 30 total users in the dataset. However, there are 33 people tracking their daily activity and the people who are tracking their activity are not also consistently tracking other metrics. Heartrate seconds, minutes slept, and weightlog are being tracked by less than the statistically significiant amount of people to form a valid sample. For this reason, we are eliminating some data such as weight tracking from our analysis.
 
