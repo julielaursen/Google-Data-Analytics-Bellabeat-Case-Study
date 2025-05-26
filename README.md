@@ -15,7 +15,7 @@ _The case study follows the six step data analysis process:_
 ## Scenario
 Bellabeat is a small high-tech company that manufactures health-focused smart products. Since it was founded in 2013 by Urška Sršen and Sando Mur, Bellabeat has opened offices around the world and now has the potential to become a larger player in the global smart device market. The company has 5 focus products at the time of this analysis: bellabeat app, leaf, time, spring, and bellabeat membership. 
 
-## 1. ❓ Ask
+## ❓ Ask
 💡 BUSINESS TASK: Our team has been asked to analyze smart device data to gain insight into consumer behavior trends. The insights we discover will then help guide marketing strategy for the company. 
 
 Specifically, our team needs to answer:
@@ -27,7 +27,7 @@ Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
 
 Secondary stakeholders: Bellabeat marketing analytics team.
 
-## 2. 💻 Prepare 
+## 💻 Prepare 
 This data was sourced from FitBit Fitness Tracker Data and made available by the user Möbius on Kaggle at https://www.kaggle.com/arashnic/fitbit. This is a public dataset. Kaggle is a platform for data science and machine learning projects.
 
 ## ROCCC Analysis of Dataset
@@ -113,9 +113,9 @@ Yes, the summary of the dataset from the project states that there are 30 total 
 [1] 8
 ```
 
-## 2. Prepare
+## ✍🏻 Prepare
 
-I began cleaning the data with several goals in mind. I wanted to eliminate duplication and null values. I wanted to ensure that the column names, type and format for date are consistent across tables. As I cleaned the data, I also made sure the column names were lowercase and in snake case for consistency.
+I began preparing the data with several goals in mind. I wanted to eliminate duplication and null values. I wanted to ensure that the column names, type and format for date are consistent across tables. As I cleaned the data, I also made sure the column names were lowercase and in snake case for consistency.
 
 The tables I am analyzing after renaming:
 
@@ -136,7 +136,7 @@ minute_steps
 heartrate_seconds
 ```
 
-### Duplication and Null Rows
+### 👭 Duplication and Null Rows
 
 In minute_sleep there were 543 duplicate rows:
 ```r
@@ -205,7 +205,7 @@ The wide version of the calories by minute table logs a row for each activity ho
 > rm(minute_steps_narrow)
 ```
 
-### DateTime
+### 🕰️ DateTime
 
 Dates were also inconsistent across tables. Before analysis, I also needed to convert these dates in date or character format to *date time* format.
 
