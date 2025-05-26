@@ -352,6 +352,8 @@ I also added in the day of the week as a new column, ex)
 
 Based on our analysis of the timeseries data, there are 31 total days where users could have been logging information. However, analyzing the daily_activity log, we only have 20 users who have logged 30 or 31 days of data.
 
+**Daily Activity**
+
 ```r
 > daily_activity %>%
 +     group_by(Id) %>%
@@ -359,7 +361,7 @@ Based on our analysis of the timeseries data, there are 31 total days where user
 +     arrange(desc(days_logged)) %>%
 +     print(n = Inf)
 
-1624580081          31
+ 1 1624580081          31
  2 2022484408          31
  3 2026352035          31
  4 2320127002          31
@@ -393,9 +395,163 @@ Based on our analysis of the timeseries data, there are 31 total days where user
 32 6775888955          17
 33 4057192912           3
 ```
-As user 4057192912 has only logged 3 activites, I would consider this user an outlier and I have removed this user from the database:
+As user 4057192912 has only logged 3 activites after cleaning, I would consider this user an outlier and I have removed this user from the data frame.
 
 ```r
 daily_activity <- daily_activity %>%
   filter(Id != 4057192912)
+```
+
+**Daily Calories**
+In daily calories, 20 users also logged 30 or more days. 
+
+```r
+> view(daily_calories)
+> daily_calories %>%
++     group_by(Id) %>%
++     summarise(days_logged = n_distinct(ActivityDate)) %>%
++     arrange(desc(days_logged)) %>%
++     print(n = Inf)
+# A tibble: 33 × 2
+           Id days_logged
+        <dbl>       <int>
+ 1 1624580081          31
+ 2 1844505072          31
+ 3 1927972279          31
+ 4 2022484408          31
+ 5 2026352035          31
+ 6 2320127002          31
+ 7 2873212765          31
+ 8 4020332650          31
+ 9 4319703577          31
+10 4388161847          31
+11 4445114986          31
+12 4558609924          31
+13 4702921684          31
+14 5553957443          31
+15 6962181067          31
+16 7086361926          31
+17 8053475328          31
+18 8378563200          31
+19 8877689391          31
+20 1503960366          30
+21 1644430081          30
+22 3977333714          30
+23 5577150313          30
+24 8583815059          30
+25 8792009665          29
+26 6117666160          28
+27 6290855005          28
+28 6775888955          26
+29 7007744171          26
+30 3372868164          20
+31 2347167796          18
+32 8253242879          18
+33 4057192912           4
+```
+Again, user 4057192912 was removed from the data frame.
+
+```r
+> daily_calories <- daily_calories %>%
++     filter(Id != 4057192912)
+```
+
+**Daily Intensities**
+In daily intensities, more users have logging information. 24 users total have 30+ days logged. User 4057192912 was removed from the data frame.
+
+```r
+> daily_intensities %>%
++     group_by(Id) %>%
++     summarise(days_logged = n_distinct(ActivityDate)) %>%
++     arrange(desc(days_logged)) %>%
++     print(n = Inf)
+# A tibble: 33 × 2
+           Id days_logged
+        <dbl>       <int>
+ 1 1503960366          31
+ 2 1624580081          31
+ 3 1844505072          31
+ 4 1927972279          31
+ 5 2022484408          31
+ 6 2026352035          31
+ 7 2320127002          31
+ 8 2873212765          31
+ 9 4020332650          31
+10 4319703577          31
+11 4388161847          31
+12 4445114986          31
+13 4558609924          31
+14 4702921684          31
+15 5553957443          31
+16 6962181067          31
+17 7086361926          31
+18 8053475328          31
+19 8378563200          31
+20 8583815059          31
+21 8877689391          31
+22 1644430081          30
+23 3977333714          30
+24 5577150313          30
+25 6290855005          29
+26 8792009665          29
+27 6117666160          28
+28 6775888955          26
+29 7007744171          26
+30 3372868164          20
+31 8253242879          19
+32 2347167796          18
+33 4057192912           4
+
+> daily_intensities <- daily_intensities %>%
++     filter(Id != 4057192912)
+```
+
+**Daily steps**
+24 users have 30+ days logged n daily steps. Again, user 4057192912 was removed from the data frame.
+
+```r
+ daily_steps %>%
++     group_by(Id) %>%
++     summarise(days_logged = n_distinct(ActivityDate)) %>%
++     arrange(desc(days_logged)) %>%
++     print(n = Inf)
+# A tibble: 33 × 2
+           Id days_logged
+        <dbl>       <int>
+ 1 1503960366          31
+ 2 1624580081          31
+ 3 1844505072          31
+ 4 1927972279          31
+ 5 2022484408          31
+ 6 2026352035          31
+ 7 2320127002          31
+ 8 2873212765          31
+ 9 4020332650          31
+10 4319703577          31
+11 4388161847          31
+12 4445114986          31
+13 4558609924          31
+14 4702921684          31
+15 5553957443          31
+16 6962181067          31
+17 7086361926          31
+18 8053475328          31
+19 8378563200          31
+20 8583815059          31
+21 8877689391          31
+22 1644430081          30
+23 3977333714          30
+24 5577150313          30
+25 6290855005          29
+26 8792009665          29
+27 6117666160          28
+28 6775888955          26
+29 7007744171          26
+30 3372868164          20
+31 8253242879          19
+32 2347167796          18
+33 4057192912           4
+
+> daily_steps <- daily_steps %>%
++     filter(Id != 4057192912)
 ```
