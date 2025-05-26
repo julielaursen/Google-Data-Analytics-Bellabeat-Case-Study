@@ -113,9 +113,9 @@ Yes, the summary of the dataset from the project states that there are 30 total 
 [1] 8
 ```
 
-## ✍🏻 Prepare
+## 🔁  Process
 
-I began preparing the data with several goals in mind. I wanted to eliminate duplication and null values. I wanted to ensure that the column names, type and format for date are consistent across tables. As I cleaned the data, I also made sure the column names were lowercase and in snake case for consistency.
+I began cleaning the data with several goals in mind. I wanted to eliminate duplication and null values. I wanted to ensure that the column names, type and format for date are consistent across tables. As I cleaned the data, I also made sure the column names were lowercase and in snake case for consistency.
 
 The tables I am analyzing after renaming:
 
