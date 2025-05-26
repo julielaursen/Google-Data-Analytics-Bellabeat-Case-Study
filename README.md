@@ -609,6 +609,8 @@ I did not eliminate users with `TotalSleepRecords > 1` however, as these could b
 
 ### 🧩 Other Outliers
 
+**Heartrate Seconds:**
+
 There are potential outliers in the table for heartrate data that may be outliers:
 
 ```r
@@ -687,6 +689,36 @@ We should also consider user `4388161847` an outlier as there is a single data p
 ```r
 > heartrate_seconds <- heartrate_seconds %>%
 +     filter(!(Id == 4388161847 & Value == 39))
+```
+
+**Daily Calories**:
+
+```r
+> view(daily_calories_clean)
+> daily_calories %>%
++     filter(Calories < 1000) %>%
++     print(n = Inf)
+# A tibble: 8 × 4
+          Id ActivityDate Calories DayOfWeek
+       <dbl> <date>          <dbl> <chr>    
+1 1844505072 2016-05-12        665 Thursday 
+2 2347167796 2016-04-29        403 Friday   
+3 3977333714 2016-05-11         52 Wednesday
+4 4319703577 2016-05-12        257 Thursday 
+5 5553957443 2016-05-12        741 Thursday 
+6 6962181067 2016-05-12        928 Thursday 
+7 7007744171 2016-05-07        120 Saturday 
+8 8792009665 2016-05-10         57 Tuesday
+```
+
+Fitbit uses the **Mifflin-St Jeor** formula, which estimates a Basal Metabolic Rate (BMR) for number of calories at rest (no physical activity) at a minimum of 1,000 kcal/day for a petit older woman. Therefore any outliers < 1,000 are likely not explained even by fasting alone. I removed these values from daily_calories
+
+```r
+> nrow(daily_calories_clean)
+[1] 932
+> daily_calories_clean <- daily_calories_clean %>% filter(Calories >= 1000)
+> nrow(daily_calories_clean)
+[1] 924
 ```
 
 
