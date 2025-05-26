@@ -62,7 +62,7 @@ This data was sourced from FitBit Fitness Tracker Data and made available by the
 To begin the analysis, we load all the required R packages in https://github.com/julielaursen/r-fitbit-data. These package are used for data cleaning, manipulation, visualization, and time/date processing. 
 
 ### Packages used in this project:
-- `tidyverse`: a colletion of R packages for data science, including:
+- `tidyverse`: a collection of R packages for data science, including:
   - `dplyr`: For data wrangling and transformation
   - `ggplot2`: For visualizing trends and patterns
   - `readr`: For reading data files
@@ -273,17 +273,11 @@ For non-daily tables, I converted the date to POSIXct and renamed the column to 
 [1] "POSIXct" "POSIXt"
 ```
 
-Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. 
+Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 5/12/16 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. daily_sleep also ends at 00:00:00 or midnight the night before. 
 
-**TO-DO**
+**To Note**
 
-daily_sleep and minute_sleep was also not easily able to be formatted
-
-```r
-> daily_sleep_clean$SleepDay <- mdy(daily_sleep_clean$SleepDay)
-Warning message:
-All formats failed to parse. No formats found.
-```
+daily_sleep has the ActivityDate of midnight which equates to 00:00:00. Since all zeros do not show, it looks as if the time is not included in the date, but `table(format(daily_sleep_clean$SleepDay, "%H:%M:%S"))` proves it's there.
 
 
 
