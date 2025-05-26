@@ -568,6 +568,13 @@ In daily intensities, more users have logging information. 24 users total have 3
 +     filter(Id != 4057192912)
 ```
 
+For consistnecy i also removed this user from other data frames:
+
+```r
+> hourly_calories <- hourly_calories %>%
++     filter(Id != 4057192912)
+```
+
 ### ➕ Additional manually-added data
 
 Some data frames include data that seems to be manually added by the user on top of the fitbit data already collected. In `daily_activity`, we can surmise that `TrackerDistance` is automatically collected by the fitbit and total distance = `TrackerDistance` + manual entry. 
