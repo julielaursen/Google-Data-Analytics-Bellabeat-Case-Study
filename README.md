@@ -332,7 +332,7 @@ minute_intensities <- minute_intensities %>%
 +            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
 > 
 > range(heartrate_seconds$ActivityDate)
-
+```
 
 
 
