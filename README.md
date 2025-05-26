@@ -189,7 +189,13 @@ Then, I remove the 77 rows of data where TotalSteps == 0 and confirm the new num
 [1] 863
 ```
 
-I then repeat this for rows where TotalDistance is 0, removing one more row in the `daily_activity` table
+I then repeat this for rows where TotalDistance is 0, removing one more row in the `daily_activity` table, and I begin filtering other 0 values in other tables:
+
+```r
+> daily_calories <- daily_calories %>% filter (Calories !=0)
+```
+removes 4 rows
+
 
 
 ### 🖋️ Formatting
@@ -342,6 +348,48 @@ I also added in the day of the week as a new column, ex)
 [1] "Id"           "ActivityDate" "Calories"     "DayOfWeek"
 ```
 
+### 🧩 Incomplete Data
 
+Based on our analysis of the timeseries data, there are 31 total days where users could have been logging information. However, analyzing the daily_activity log, we only have 20 users who have logged 30 or 31 days of data.
 
+```r
+> daily_activity %>%
++     group_by(Id) %>%
++     summarise(days_logged = n_distinct(ActivityDate)) %>%
++     arrange(desc(days_logged)) %>%
++     print(n = Inf)
 
+1624580081          31
+ 2 2022484408          31
+ 3 2026352035          31
+ 4 2320127002          31
+ 5 2873212765          31
+ 6 4319703577          31
+ 7 4388161847          31
+ 8 4445114986          31
+ 9 4558609924          31
+10 5553957443          31
+11 6962181067          31
+12 8053475328          31
+13 8378563200          31
+14 8877689391          31
+15 1503960366          30
+16 1644430081          30
+17 3977333714          30
+18 4702921684          30
+19 7086361926          30
+20 8583815059          30
+21 5577150313          28
+22 6290855005          24
+23 7007744171          24
+24 6117666160          23
+25 1844505072          20
+26 3372868164          20
+27 8792009665          19
+28 2347167796          18
+29 8253242879          18
+30 1927972279          17
+31 4020332650          17
+32 6775888955          17
+33 4057192912           3
+```
