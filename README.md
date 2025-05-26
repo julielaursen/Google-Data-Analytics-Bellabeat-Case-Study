@@ -686,7 +686,7 @@ Participants recorded the most data between Tuesday-Thursday.
 
 **Total Steps**
 
-This bar graph of Average Daily Steps per user by Day of WEek shows that Saturday has the highest amount of steps at almost 10,000 steps per day.
+This bar graph of Average Daily Steps per user by Day of Week shows that Saturday has the highest amount of steps at almost 10,000 steps per day.
 
 ![image](https://github.com/user-attachments/assets/daadc8b4-7d1b-4a1c-b442-fbdcec5de157)
 
