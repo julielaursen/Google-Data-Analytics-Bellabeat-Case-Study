@@ -720,7 +720,31 @@ Fitbit uses the **Mifflin-St Jeor** formula, which estimates a Basal Metabolic R
 > nrow(daily_calories_clean)
 [1] 924
 ```
+Since `daily_activities` includes data beyond just calories, I did not want to eliminate entire rows of data. I summarized the user average of calories by Id and then used the mutate function to replace users who had under 1000 calories with that specific user's average.
 
+```r
+> low_cal_count <- daily_activity_clean %>%
++     filter(Calories < 1000) %>%
++     nrow()
+> 
+> cat("Rows with Calories < 1000 before replacement:", low_cal_count, "\n")
+Rows with Calories < 1000 before replacement: 5
+
+> user_avg_calories <- daily_activity_clean %>%
++     group_by(Id) %>%
++     summarise(avg_calories = mean(Calories, na.rm = TRUE))
+
+daily_activity_clean <- daily_activity_clean %>%
+  left_join(user_avg_calories, by = "Id") %>%
+  mutate(Calories = ifelse(Calories < 1000, avg_calories, Calories)) %>%
+  select(-avg_calories)
+
+> low_cal_count <- daily_activity_clean %>% filter(Calories < 1000) %>% nrow()
+> daily_activity_clean %>%
++     filter(Calories < 1000) %>%
++     print(n = Inf)
+# A tibble: 0 × 16
+```
 
 ## 📊 Analyze
 
