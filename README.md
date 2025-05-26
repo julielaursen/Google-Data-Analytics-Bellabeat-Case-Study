@@ -168,6 +168,30 @@ I then confirmed this by removing duplicates and comparing the rows before and a
 [1] 410
 ```
 
+Although I've checked for null and empty rows, I also want to check for rows where the values might be "0". 
+
+```r
+> nrow(daily_activity)
+[1] 940
+
+> view(daily_activity)
+> daily_activity %>%
++     filter(TotalSteps == 0)
+# A tibble: 77 × 16
+```
+
+Then, I remove the 77 rows of data where TotalSteps == 0 and confirm the new number of rows is the subtracted zero rows.
+
+```r
+> daily_activity <- daily_activity %>% filter(TotalSteps !=0)
+> 
+> nrow(daily_activity)
+[1] 863
+```
+
+I then repeat this for rows where TotalDistance is 0, removing one more row in the `daily_activity` table
+
+
 ### 🖋️ Formatting
 
 Daily tables of activity were in long format, but the data in csvs that calculated by minutes came in two different versions. There were tables in long format and tables in wide format. I found the tables in wide format difficult to read. For example,
