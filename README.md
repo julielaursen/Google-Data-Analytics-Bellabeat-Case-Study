@@ -682,7 +682,7 @@ daily_merged %>%
 
 Participants recorded the most data between Tuesday-Thursday.
 
-![image](https://github.com/user-attachments/assets/5f3ceb6d-3d2b-4005-a1dc-b563b158c261)
+<img src="recordedDaysPerWeek.png" width="900" height="500" alt="Bar chart showing number of recorded days per day of the week. Tuesday and Wednesday have the most recorded days, while Monday has the fewest." />
 
 **Total Steps**
 
