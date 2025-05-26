@@ -684,6 +684,17 @@ Participants recorded the most data between Tuesday-Thursday.
 
 ![image](https://github.com/user-attachments/assets/5f3ceb6d-3d2b-4005-a1dc-b563b158c261)
 
+**Total Steps**
+
+This bar graph of Average Daily Steps per user by Day of WEek shows that Saturday has the highest amount of steps at almost 10,000 steps per day.
+
+![image](https://github.com/user-attachments/assets/daadc8b4-7d1b-4a1c-b442-fbdcec5de157)
+
+It is likely that users are running errands, doing housework or doing light exercise on Saturday more than on other days. 
+
+![image](https://github.com/user-attachments/assets/7241a5dc-ddc9-47f1-a0d0-384238e9f039)
+
+
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
 
 ![image](https://github.com/user-attachments/assets/e0773b68-900b-4a3d-8602-dcdf0269eb00)
