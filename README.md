@@ -352,7 +352,9 @@ I also added in the day of the week as a new column, ex)
 
 Based on our analysis of the timeseries data, there are 31 total days where users could have been logging information. However, analyzing the daily_activity log, we only have 20 users who have logged 30 or 31 days of data.
 
-**Daily Activity**
+**Daily Activity:**
+
+Only 20 users had 30 or more days of activity logged. As user 4057192912 has only logged 3 activites after cleaning, I considered this user an outlier and I have removed this user from the data frame.
 
 ```r
 > daily_activity %>%
@@ -394,16 +396,14 @@ Based on our analysis of the timeseries data, there are 31 total days where user
 31 4020332650          17
 32 6775888955          17
 33 4057192912           3
-```
-As user 4057192912 has only logged 3 activites after cleaning, I would consider this user an outlier and I have removed this user from the data frame.
 
-```r
 daily_activity <- daily_activity %>%
   filter(Id != 4057192912)
 ```
 
-**Daily Calories**
-In daily calories, 20 users also logged 30 or more days. 
+**Daily Calories:**
+
+In daily calories, 20 users also logged 30 or more days. Again, user 4057192912 was removed from the data frame.
 
 ```r
 > view(daily_calories)
@@ -448,15 +448,12 @@ In daily calories, 20 users also logged 30 or more days.
 31 2347167796          18
 32 8253242879          18
 33 4057192912           4
-```
-Again, user 4057192912 was removed from the data frame.
 
-```r
 > daily_calories <- daily_calories %>%
 +     filter(Id != 4057192912)
 ```
 
-**Daily Intensities**
+**Daily Intensities:**
 In daily intensities, more users have logging information. 24 users total have 30+ days logged. User 4057192912 was removed from the data frame.
 
 ```r
@@ -506,7 +503,7 @@ In daily intensities, more users have logging information. 24 users total have 3
 +     filter(Id != 4057192912)
 ```
 
-**Daily steps**
+**Daily steps:**
 24 users have 30+ days logged n daily steps. Again, user 4057192912 was removed from the data frame.
 
 ```r
