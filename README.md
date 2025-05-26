@@ -306,32 +306,7 @@ hourly_calories <- hourly_calories %>%
 > 
 > range(minute_calories$ActivityDate)
 [1] "2016-04-12 CDT" "2016-05-12 CDT"
-
-minute_intensities <- minute_intensities %>%
-  filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
-         ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
-> range(minute_intensities$ActivityDate)
-[1] "2016-04-12 CDT" "2016-05-12 CDT"
-
-> minute_METS <- minute_METS %>%
-+     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
-+            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
-> 
-> range(minute_METS$ActivityDate)
-[1] "2016-04-12 CDT" "2016-05-12 CDT"
-
-> minute_steps <- minute_steps %>%
-+     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
-+            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
-> 
-> range(minute_steps$ActivityDate)
-[1] "2016-04-12 CDT" "2016-05-12 CDT"
-
-> heartrate_seconds <- heartrate_seconds %>%
-+     filter(ActivityDate >= as.POSIXct("2016-04-12 00:00:00"),
-+            ActivityDate <= as.POSIXct("2016-05-12 00:00:00"))
-> 
-> range(heartrate_seconds$ActivityDate)
+....
 ```
 
 
