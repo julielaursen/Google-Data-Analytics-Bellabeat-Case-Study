@@ -755,7 +755,7 @@ I decided to merge the `sleep` daily table with the `daily activity` table to gi
 +     inner_join(daily_sleep_clean, by = c("Id", "ActivityDate")) %>%
 ```
 
-### Min, Med, Mean, and Max
+### 📊 Summary of Key Metrics
 
 ```r
 daily_merged %>%
