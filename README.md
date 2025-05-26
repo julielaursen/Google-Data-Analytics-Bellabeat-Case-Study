@@ -393,3 +393,9 @@ Based on our analysis of the timeseries data, there are 31 total days where user
 32 6775888955          17
 33 4057192912           3
 ```
+As user 4057192912 has only logged 3 activites, I would consider this user an outlier and I have removed this user from the database:
+
+```r
+daily_activity <- daily_activity %>%
+  filter(Id != 4057192912)
+```
