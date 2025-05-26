@@ -273,13 +273,13 @@ For non-daily tables, I converted the date to POSIXct and renamed the column to 
 [1] "POSIXct" "POSIXt"
 ```
 
-Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 5/12/16 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. daily_sleep also ends at 00:00:00 or midnight the night before and minute_sleep starts at 4/11/2016 20:48 and ends at 5/12/2016 at 9:56.
+Now, I was able to easily check the range of dates to make sure we're not starting late or ending early. All cleaned datasheets (except sleep) start at 4/12/16 midnight and end at 5/12/16 15:00 POSIX time except for minute_calories, minute_intensities, minute_METs, and heartrate_seconds, which all end at 15:59, 15:59, 15:59, and 16:20 respectively. daily_sleep also ends at 00:00:00 or midnight the night before and minute_sleep starts at 4/11/2016 20:48 and ends at 5/12/2016 at 9:56. This variation could lead to inconsistencies when comparing or merging data across sources.
 
-**To Note**
+**Note**
 
 daily_sleep has the ActivityDate of midnight which equates to 00:00:00. Since all zeros do not show, it looks as if the time is not included in the date, but `table(format(daily_sleep_clean$SleepDay, "%H:%M:%S"))` proves it's there.
 
-Making all the ranges cover the same amount of time, using the dates of midnight on the start day to midnights on the end day, similar to the sleep tables.
+To ensure temporal alignment and consistency in the analysis, I standardized all time-series datasets to cover the same time window: **April 12, 2016 at 00:00:00** through **May 12, 2016 at 00:00:00**
 
 ```r
 hourly_calories <- hourly_calories %>%
