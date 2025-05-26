@@ -30,7 +30,7 @@ Secondary stakeholders: Bellabeat marketing analytics team.
 ## 💻 Prepare 
 This data was sourced from FitBit Fitness Tracker Data and made available by the user Möbius on Kaggle at https://www.kaggle.com/arashnic/fitbit. This is a public dataset. Kaggle is a platform for data science and machine learning projects.
 
-## ROCCC Analysis of Dataset
+## 🔬 ROCCC Analysis of Dataset
 
 | **Criterion**      | **Result** | **Assessment**                                                                                                                                       |
 |--------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
