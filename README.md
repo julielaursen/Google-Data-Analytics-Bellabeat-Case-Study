@@ -781,11 +781,17 @@ daily_merged %>%
 
 - The mean **sedentary time** is 712 minutes, which is almost 12 hours of sedentary time a day.
 - The mean **lightly active** minutes is roughly 3.5 hours
-- However, for **fairly active** and **very active minutes**, users got less than an hour. 
-- The mean **total steps** is 8541, with the max user getting 22,770 steps
+- However, for **fairly active** and **very active minutes**, users got less than an hour. Most users engaged in very littel intense exercise (some none at all).
+- The mean **total steps** is 8541, with the max user getting 22,770 steps. This means users are moderately active.
 - The mean **calories** were 2411
-- The mean **total minutes asleep** was 419.5 which is roughly 7 hours
-- The mean t**otal time in bed** was 458, meaning users spent approximately 40 minutes in bed not sleeping
+- The mean **total minutes asleep** was 419.5 which is roughly 7 hours, consistent with healthy guidelines.
+- The mean **total time in bed** was 458, meaning users spent approximately 40 minutes in bed not sleeping
+
+#### Data Visualizations
+
+Participants recorded the most data between Tuesday-Thursday.
+
+![image](https://github.com/user-attachments/assets/5f3ceb6d-3d2b-4005-a1dc-b563b158c261)
 
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
 
