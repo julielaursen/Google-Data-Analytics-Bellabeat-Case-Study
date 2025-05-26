@@ -568,4 +568,35 @@ In daily intensities, more users have logging information. 24 users total have 3
 +     filter(Id != 4057192912)
 ```
 
+### ➕ Additional manually-added data
+
+Some data frames include data that seems to be manually added by the user on top of the fitbit data already collected. In `daily_activity`, we can surmise that `TrackerDistance` is automatically collected by the fitbit and total distance = `TrackerDistance` + manual entry. 
+
+```
+> daily_activity %>%
++     filter(TotalDistance > TrackerDistance)
+# A tibble: 15 × 16
+           Id ActivityDate TotalSteps TotalDistance TrackerDistance
+        <dbl> <date>            <dbl>         <dbl>           <dbl>
+ 1 6962181067 2016-04-21        11835          9.71            7.88
+ 2 6962181067 2016-04-25        13239          9.27            9.08
+ 3 6962181067 2016-05-09        12342          8.72            8.68
+ 4 7007744171 2016-04-12        14172         10.3             9.48
+ 5 7007744171 2016-04-13        12862          9.65            8.60
+ 6 7007744171 2016-04-14        11179          8.24            7.48
+ 7 7007744171 2016-04-18        14816         11.0             9.91
+ 8 7007744171 2016-04-19        14194         10.5             9.5 
+ 9 7007744171 2016-04-20        15566         11.3            10.4 
+10 7007744171 2016-04-25        18229         13.3            12.2 
+11 7007744171 2016-04-27        13541         10.2             9.06
+12 7007744171 2016-04-29        20067         14.3            13.4 
+13 7007744171 2016-05-02        13041          9.18            8.72
+14 7007744171 2016-05-03        14510         10.9             9.71
+15 7007744171 2016-05-05        15010         11.1            10.0
+```
+The majority of these manual entries seem to be coming from user `7007744171`
+
+I also discovered that while most users have a single sleep session per day, a small group of users in `daily_sleep` had `TotalSleepRecords` equal to 2 or 3. 
+
+I did not eliminate users with `TotalSleepRecords > 1` however, as these could be shift workers, people who take naps, or people who frequently wake up in the night.
 
