@@ -459,13 +459,45 @@ In daily intensities, more users have logging information. 24 users total have 3
 +     filter(Id != 4057192912)
 ```
 
-For consistnecy i also removed this user from other data frames:
+For consistency i also removed this user from other data frames:
 
 ```r
 > hourly_calories <- hourly_calories %>%
 +     filter(Id != 4057192912)
 ```
 
+**😴 Sleep Efficiency**
+
+The lowest sleep efficiency ratings coem from users who logged less than 10 days, potentially throwing off the data.
+ ```r
+> 
+> # Calculate sleep efficiency per record
+> lowest_efficiency_users <- daily_merged %>%
++     filter(TotalTimeInBed > 0) %>%
++     mutate(SleepEfficiency = TotalMinutesAsleep / TotalTimeInBed) %>%
++     group_by(Id) %>%
++     summarise(
++         Avg_SleepEfficiency = mean(SleepEfficiency, na.rm = TRUE),
++         Days_Logged = n()
++     ) %>%
++     arrange(Avg_SleepEfficiency)  # Lowest efficiency first
+> 
+> # View the bottom users
+> head(lowest_efficiency_users, 10)
+# A tibble: 10 × 3
+           Id Avg_SleepEfficiency Days_Logged
+        <dbl>               <dbl>       <int>
+ 1 3977333714               0.634          28
+ 2 1844505072               0.678           3
+ 3 1644430081               0.882           4
+ 4 2320127002               0.884           1
+ 5 4558609924               0.907           5
+ 6 2347167796               0.910          15
+ 7 5553957443               0.915          31
+ 8 8378563200               0.919          32
+ 9 4445114986               0.925          28
+10 4020332650               0.930           8
+```
 ### ➕ Additional manually-added data
 
 Some data frames include data that seems to be manually added by the user on top of the fitbit data already collected. In `daily_activity`, we can surmise that `TrackerDistance` is automatically collected by the fitbit and total distance = `TrackerDistance` + manual entry. 
