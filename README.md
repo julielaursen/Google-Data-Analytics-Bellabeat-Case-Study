@@ -416,7 +416,7 @@ daily_activity <- daily_activity %>%
   filter(Id != 4057192912)
 ```
 
-**Daily Calories:**
+🥘 **Daily Calories:**
 
 In daily calories, 20 users also logged 30 or more days. Again, user `4057192912` was removed from the data frame.
 
@@ -432,7 +432,7 @@ In daily calories, 20 users also logged 30 or more days. Again, user `4057192912
 +     filter(Id != 4057192912)
 ```
 
-**Daily Intensities:**
+🏋️ **Daily Intensities:**
 In daily intensities, more users have logging information. 24 users total have 30+ days logged. User `4057192912` was removed from the data frame.
 
 ```r
@@ -445,7 +445,7 @@ In daily intensities, more users have logging information. 24 users total have 3
 +     filter(Id != 4057192912)
 ```
 
-**Daily steps:**
+👟 **Daily steps:**
 24 users have 30+ days logged n daily steps. Again, user `4057192912` was removed from the data frame.
 
 ```r
@@ -582,7 +582,7 @@ We should also consider user `4388161847` an outlier as there is a single data p
 +     filter(!(Id == 4388161847 & Value == 39))
 ```
 
-**Daily Calories**:
+**🥘 Daily Calories**:
 
 ```r
 > view(daily_calories_clean)
@@ -678,7 +678,7 @@ daily_merged %>%
 - The mean **total minutes asleep** was 419.5 which is roughly 7 hours, almost consistent with healthy guidelines but could be improved to be within the recommended 7-9 hours.
 - The mean **total time in bed** was 458, meaning users spent approximately 40 minutes in bed not sleeping
 
-### Activity Summary
+### 🚴 Activity Summary
 
 The <a href="https://www.cdc.gov/physical-activity-basics/guidelines/adults.html">CDC</a> recommends at least 150 minutes of moderate-intensity physical activity a week. This can also be 75 minutes of vigorous-intensity or an equivalent combination of mdoerate and vigorous-intensity physical activity per week. Let's look at the first full week.
 
@@ -862,7 +862,7 @@ I was able to show that most users were high users. Note that the one user with 
 
 <img src="daily_use.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
 
-**Heartrate Data**
+**❤️ Heartrate Data**
 
 | Id         | Cardio    | Fat Burn | Peak     | Resting   | Total High Intensity | Meets Guidelines |
 |------------|-----------|----------|----------|-----------|----------------------|------------------|
@@ -905,7 +905,7 @@ I also inspected the users who did not meet the criteria for HR and who had ligh
 <img src="HeartRateZones.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
 <br>
 
-### Sleep Summary
+### 😴 Sleep Summary
 
 The CDC also recommends between 7 and 9 hours of sleep. Users are getting roughly 6.98 hours of sleep on average which, after rounding, is inline with CDC guidelines.
 
