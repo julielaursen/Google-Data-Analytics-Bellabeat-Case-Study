@@ -797,6 +797,71 @@ Table: Very Active and Sedentary Minutes (May 1–7, 2016)
 
 These tables show that the users who are recording activity the most (6-7 days a week) are also the users who have the most very active days. Many of these users would be in the 3rd quartile of the summary or top 25% of users, who had over 38 very active minutes per day. These users are meeting the CDC guidelines for physical activity. This is also higher than the national average, indicating that fitbit users may show a selection bias as individuals who are more health-conscious or physically active may be more likely to purchase a fitbit.
 
+I was able to show that most users were high users. Note that the one user with only 3-4 days worth of data has been eliminated from the dataset.
+
+```
+
+> daily_use <- daily_activity_clean %>%
++     mutate(ActivityDate = as.Date(ActivityDate, format = "%m/%d/%Y")) %>%
++     group_by(Id) %>%
++     summarise(days_logged = n_distinct(ActivityDate), .groups = "drop") %>%
++     mutate(user_type = case_when(
++         days_logged >= 1 & days_logged <= 10 ~ "low user",
++         days_logged >= 11 & days_logged <= 20 ~ "moderate user", 
++         days_logged >= 21 & days_logged <= 31 ~ "high user"
++     ))
+> 
+> # Print the number of users in each group
+> daily_use %>%
++     group_by(user_type) %>%
++     summarise(users = n())
+# A tibble: 2 × 2
+  user_type     users
+  <chr>         <int>
+1 high user        24
+2 moderate user     8
+> 
+> daily_use_percent <- daily_use %>%
++     group_by(user_type) %>%
++     summarise(total = n()) %>%
++     mutate(totals = sum(total)) %>%
++     group_by(user_type) %>%
++     summarise(total_percent = total / totals) %>%
++     mutate(labels = scales::percent(total_percent))
+> 
+> daily_use_percent$user_type <- factor(daily_use_percent$user_type, levels = c("high user", "moderate user", "low user"))
+> 
+> head(daily_use_percent)
+# A tibble: 2 × 3
+  user_type     total_percent labels
+  <fct>                 <dbl> <chr> 
+1 high user              0.75 75%   
+2 moderate user          0.25 25%   
+> daily_use_percent %>%
++     ggplot(aes(x = "",y = total_percent, fill = user_type)) +
++     geom_bar(stat = "identity", width = 1)+
++     coord_polar("y", start=0)+
++     theme_minimal()+
++     theme(axis.title.x= element_blank(),
++           axis.title.y = element_blank(),
++           panel.border = element_blank(), 
++           panel.grid = element_blank(), 
++           axis.ticks = element_blank(),
++           axis.text.x = element_blank(),
++           plot.title = element_text(hjust = 0.5, size=14, face = "bold")) +
++     geom_text(aes(label = labels),
++               position = position_stack(vjust = 0.5))+
++     scale_fill_manual(values = c( "#d62d58","#db7980","#fc9fb7"),
++                       labels = c("High user - 21 to 31 days",
++                                  "Moderate user - 11 to 20 days",
++                                  "Low user - 1 to 10 days"))+
++     labs(title="Daily use of smart device")
+> 
+>
+```
+
+<img src="daily_use.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
+
 **Heartrate Data**
 
 | Id         | Cardio    | Fat Burn | Peak     | Resting   | Total High Intensity | Meets Guidelines |
@@ -864,6 +929,8 @@ Sleep efficiency thresholds are considered good/normal, based on the National Sl
 ## 🫶 Share
 
 ### 🖼️ Data Visualizations
+
+Participants showed high daily usage
 
 Participants recorded the most data between Tuesday-Thursday and this chart suggests that data may drop off during the weekend, when users might not feel as disciplined.
 <br>
