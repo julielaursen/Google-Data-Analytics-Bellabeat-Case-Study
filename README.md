@@ -979,6 +979,14 @@ The scatter plot of steps vs. calories burned reveals a strong positive correlat
 <img src="steps.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
 <br>
 <br>
+The scatter plot of total distance vs. calories burned also reveals a strong positive correlation. As users' daily distance increases, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. 
+<br>
+<br>
+<img src="totaldistancevscalories.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
+<br>
+<br>
+
+
 The scatterplot of average calories burned per day of the week also shows a correlation between the most calories burned on the highest activity day (Saturday) and the lowest amount of calories burned on the lowest activity day (Sunday).
 <br>
 <br>
