@@ -902,7 +902,8 @@ There are ten total users that meet the guidelines for physical activity ( ≥15
 
 I also inspected the users who did not meet the criteria for HR and who had lightly active minutes. These users were not completely sedentary and had an average step count of 4000-6000 per day. This shows that walking and light activity is NOT enough to meet heartrate guidelines as they do not put a user in the Peak or Fat Burning Zones. 
 
-![image](https://github.com/user-attachments/assets/a3d2d899-79f2-489e-945b-86cf8649fe13)
+<img src="HeartRateZones.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
+<br>
 
 ### Sleep Summary
 
