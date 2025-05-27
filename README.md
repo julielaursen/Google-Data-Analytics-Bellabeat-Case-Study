@@ -702,7 +702,7 @@ This plot shows that the users activity level by fairly, medium, or highly activ
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
 <br>
 <br>
-<img src="steps.png" alt="Scatter plot showing steps vs calories." />
+<img src="steps.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
 <br>
 <img src="caloriesDayOfWeek.png" width="700" height="400" alt="Bar chart showing the average number of calories per day of week." />
 
