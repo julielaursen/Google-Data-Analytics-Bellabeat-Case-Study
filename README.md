@@ -967,10 +967,17 @@ This bar graph shows that users have the most hourly steps during the evening
 <br>
 <img src="hourlySteps.png" width="900" height="500" alt="Bar chart showing the average number of steps per hour of the day." />
 <br>
-
+<br>
 This chart shows the users sleep levels by day of the week with the highest amount of sleep on Sunday, which is also when users are getting the lowest step count and lowest active days per week. This suggests that most participants think of Sundays as "Rest days' and may be intentionally working out on other days of the week.
 
 <img src="sleep.png" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
+
+<br>
+This chart shows the users sleep efficiency with the dashed line being perfect sleep efficiency and points below the line indicating sleep inefficiency. More time in bed has a strong positive correlation to more sleep. Some points far below the line may represent nights were users were in bed but had very low sleep duration.
+<br>
+<br>
+<img src="sleepvsinbed" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
+
 
 <br>
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
