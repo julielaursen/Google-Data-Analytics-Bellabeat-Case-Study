@@ -681,10 +681,63 @@ daily_merged %>%
 The <a href="https://www.cdc.gov/physical-activity-basics/guidelines/adults.html">CDC</a> recommends at least 150 minutes of moderate-intensity physical activity a week. This can also be 75 minutes of vigorous-intensity or an equivalent combination of mdoerate and vigorous-intensity physical activity per week.
 
 ```r
+# Define the full week
+start_date <- as.Date("2016-04-17")
+end_date <- as.Date("2016-04-23")
 
+# Prepare and inspect
+summary_table <- daily_activity_clean %>%
+  mutate(
+    ActivityDate = as.Date(ActivityDate, format = "%m/%d/%Y"),
+    ActiveMinutes = VeryActiveMinutes
+  ) %>%
+  filter(ActivityDate >= start_date & ActivityDate <= end_date) %>%
+  group_by(Id) %>%
+  summarise(
+    Days_Recorded = n(),
+    Total_Active_Minutes = sum(ActiveMinutes, na.rm = TRUE),
+    Active_Days = sum(ActiveMinutes > 0, na.rm = TRUE),
+    Total_Sedentary_Minutes = sum(SedentaryMinutes, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  filter(Days_Recorded == 7) %>%
+  arrange(desc(Total_Active_Minutes))
+
+# Show table
+summary_table %>%
+  kable(digits = 2, caption = "Total Very Active and Sedentary Minutes (Apr 17–23, 2016)")
+
+```r
+|         Id| Days_Recorded| Total_Active_Minutes| Active_Days| Total_Sedentary_Minutes|
+|----------:|-------------:|--------------------:|-----------:|-----------------------:|
+| 5577150313|             7|                  705|           7|                    4774|
+| 8053475328|             7|                  677|           7|                    7262|
+| 8378563200|             7|                  588|           6|                    5005|
+| 8877689391|             7|                  487|           7|                    7821|
+| 2022484408|             7|                  311|           6|                    7659|
+| 1503960366|             7|                  284|           7|                    6068|
+| 7007744171|             7|                  257|           6|                    7582|
+| 6962181067|             7|                  242|           7|                    4472|
+| 4388161847|             7|                  208|           6|                    5685|
+| 5553957443|             7|                  141|           3|                    4944|
+| 8253242879|             7|                  141|           5|                    8704|
+| 2873212765|             7|                   99|           5|                    7642|
+| 2347167796|             7|                   87|           6|                    4978|
+| 3372868164|             7|                   84|           5|                    7773|
+| 3977333714|             7|                   69|           5|                    4955|
+| 4702921684|             7|                   59|           6|                    5512|
+| 8583815059|             7|                   57|           5|                    8802|
+| 4558609924|             7|                   53|           6|                    7678|
+| 1644430081|             7|                   49|           3|                    8918|
+| 6117666160|             7|                   37|           2|                    3933|
+| 1624580081|             7|                   32|           2|                    8786|
+| 4445114986|             7|                   25|           1|                    6903|
+| 1844505072|             7|                    4|           2|                    8949|
+| 4319703577|             7|                    2|           2|                    5982|
+| 2320127002|             7|                    1|           1|                    8316|
+| 2026352035|             7|                    0|           0|                    5442|
 ```
-
-
+This shows that the users who are recording activity the most (6-7 days a week) are also the users who have the most very active days. These users would be in the 3rd quartile of the summary or top 25% of users, who had over 38 very active minutes per day. These users are meeting the CDC guidelines for vigorous physical activity. This is also higher than the national average, indicating that fitbit users may show a selection bias as individauls who are more health-conscious or physically active may be more likely to purchase a fitbit.
 
 ## 🫶 Share
 
