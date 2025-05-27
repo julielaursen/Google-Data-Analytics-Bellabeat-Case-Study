@@ -680,6 +680,8 @@ I decided to merge the `sleep` daily table with the `daily activity` table to gi
 
 ### 🗄️ Summary of Tables - ERD diagram
 
+Depending on hour ActivityDate is split up, relationships are 1:1 between the composite keys of Id and ActivityDate. There is 1 Id per 1 ActivityDate in the daily_activity table. If we split the date into datetime, there is a many:1 relationship between daily_activity and hourly tables.
+
 <img src="ERDdiagram2.png" width="1000" height="1000" alt="ERD diagram" />
 
 
