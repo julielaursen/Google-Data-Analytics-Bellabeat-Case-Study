@@ -930,8 +930,6 @@ Sleep efficiency thresholds are considered good/normal, based on the National Sl
 
 ### 🖼️ Data Visualizations
 
-Participants showed high daily usage
-
 Participants recorded the most data between Tuesday-Thursday and this chart suggests that data may drop off during the weekend, when users might not feel as disciplined.
 <br>
 
