@@ -1019,13 +1019,19 @@ We could run the experiment again with a larger data set and for multiple concur
 
 ### Conversion ###
 
+One gap in our analysis was the lack of weightlog info as only 8 participants filled this part of the study out. Analysis also indicates that 61.2% of users also entered this data manually, increasing friction between the customer and the product. We should decrease this friction by running the case study for a longer period of time and collecting reasons that the data was not uploaded automatically. More automatic uploads may encourage users to continue using this product for weight tracking.
+
 ### Loyalty ###
 
+Our goal is to turn active users into loyal brand followers, preferably customers who create UGC (User Generated Content). Our analysis earlier indicated that almost 75% of our users were highly engaged users who recorded 30-31 days of activity for the month. 
+
+- We can pair with a point-award incentive system
+- Re-marketing toward users who are currently using one of our devices (Leaf, Time, Spring) to encourage users to purchase other types of trackers. For instance, a user who is consistently using the Leaf (Belllabeat's classic wellness tracker) may be intersted in Spring, our water bottl which tracks daily water intake and hydration levels.
 
 
 
-🚲 Educational healthy style campaign encourages users to have short active exercises during the week
-🎁 Educational healthy style campaign can pair with a point-award incentive system
+
+
 
 
 
