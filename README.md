@@ -692,6 +692,10 @@ It is likely that users are running errands, doing housework or doing light exer
 
 <img src="lightlyActiveDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of lightly active days per day of the week." />
 
+This plot shows that the users activity level by fairly, medium, or highly active.
+
+<img src="activity_plot.png" width="1000" height="500">
+
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
 
 ![image](https://github.com/user-attachments/assets/e0773b68-900b-4a3d-8602-dcdf0269eb00)
