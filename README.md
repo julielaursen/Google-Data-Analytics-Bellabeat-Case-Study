@@ -639,7 +639,7 @@ daily_activity_clean <- daily_activity_clean %>%
 
 ## 📊 Analyze
 
-I decided to merge the `sleep` daily table with the `daily activity` table to give a comprehensive overview of each individual's activity and sleep patterns by ActivityDate. I removed the DayOfWeek column from the tables merged in so it wouldn't create redundant columns and then used an inner join to join the other two tables to daily_activity
+I decided to merge the `sleep` daily table with the `daily activity` table to give a comprehensive overview of each individual's activity and sleep patterns by ActivityDate. I removed the `DayOfWeek` column from the tables merged in so it wouldn't create redundant columns and then used an inner join to join the other two tables to daily_activity
 
 ```r
 > daily_merged <- daily_activity_clean %>%
