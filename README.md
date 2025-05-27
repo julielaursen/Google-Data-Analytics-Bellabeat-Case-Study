@@ -672,11 +672,19 @@ daily_merged %>%
 
 - The mean **sedentary time** is 712 minutes, which is almost 12 hours of sedentary time a day.
 - The mean **lightly active** minutes is roughly 3.5 hours
-- However, for **fairly active** and **very active minutes**, users got less than an hour. Most users engaged in very littel intense exercise (some none at all).
+- However, for **fairly active** and **very active minutes**, users got less than an hour. Most users engaged in very little intense exercise (some none at all).
 - The mean **total steps** is 8541, with the max user getting 22,770 steps. This means users are moderately active.
 - The mean **calories** were 2411
 - The mean **total minutes asleep** was 419.5 which is roughly 7 hours, consistent with healthy guidelines.
 - The mean **total time in bed** was 458, meaning users spent approximately 40 minutes in bed not sleeping
+
+The <a href="https://www.cdc.gov/physical-activity-basics/guidelines/adults.html">CDC</a> recommends at least 150 minutes of moderate-intensity physical activity a week. This can also be 75 minutes of vigorous-intensity or an equivalent combination of mdoerate and vigorous-intensity physical activity per week.
+
+```r
+
+```
+
+
 
 ## 🫶 Share
 
