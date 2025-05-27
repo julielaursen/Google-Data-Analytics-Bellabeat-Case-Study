@@ -686,7 +686,7 @@ Participants recorded the most data between Tuesday-Thursday.
 
 This bar graph of Average Daily Steps per user by Day of Week shows that Saturday has the highest amount of steps at almost 10,000 steps per day.
 
-<img src="dailyStepsPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of daily steps per day of the week." />
+<img src="dailyStepsDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of daily steps per day of the week." />
 
 It is likely that users are running errands, doing housework or doing light exercise on Saturday more than on other days. 
 
