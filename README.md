@@ -935,7 +935,7 @@ Participants recorded the most data between Tuesday-Thursday and this chart sugg
 <br>
 <img src="recordedDaysPerWeek.png" width="900" height="500" alt="Bar chart showing number of recorded days per day of the week. Tuesday and Wednesday have the most recorded days, while Monday has the fewest." />
 <br>
-This bar graph of Average Daily Steps per user by Day of Week shows that Saturday has the highest amount of steps at almost 10,000 steps per day. This indicates that users are more likely to have more steps when they have the most free time. 
+This bar graph of Average Daily Steps per user by Day of Week shows that Saturday has the highest amount of steps at almost 10,000 steps per day. This indicates that users are more likely to have more steps when they have the most free time. <br>
 <br>
 <img src="dailyStepsDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of daily steps per day of the week." />
 <br>
@@ -963,6 +963,7 @@ The scatter plot of steps vs. calories burned reveals a strong positive correlat
 <br>
 <img src="steps.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
 <br>
+The scatterplot of average calories burned per day of the week also shows a correlation between the most calories burned on the highest activity day (Saturday) and the lowest amount of calories burned on the lowest activity day (Sunday).
 <img src="caloriesDayOfWeek.png" width="700" height="400" alt="Bar chart showing the average number of calories per day of week." />
 
 
