@@ -956,14 +956,16 @@ This plot shows that the users activity level by fairly, medium, or highly activ
 <img src="distance_metrics.png" width="1000" height="500">
 <br>
 
-This bar graph shows that users have the most hourly activity during the evening
+This bar graph shows that users exert the most activity during the evening, peaking between 6pm-8pm. This likely shows that users are exercising or completing light activity directly after work. There is another spike around what might be considered lunch where users might be getting in a quick workout or just walking more to get lunch.
+<br>
 <br>
 <img src="hourlyIntensities.png" width="900" height="500" alt="Bar chart showing the average hourly activity per day." />
 <br>
 
 This bar graph shows that users have the most hourly steps during the evening
 <br>
-<img src="hourlySteps" width="900" height="500" alt="Bar chart showing the average number of steps per hour of the day." />
+<br>
+<img src="hourlySteps.png" width="900" height="500" alt="Bar chart showing the average number of steps per hour of the day." />
 <br>
 
 This chart shows the users sleep levels by day of the week with the highest amount of sleep on Sunday, which is also when users are getting the lowest step count and lowest active days per week. This suggests that most participants think of Sundays as "Rest days' and may be intentionally working out on other days of the week.
@@ -983,7 +985,8 @@ The scatterplot of average calories burned per day of the week also shows a corr
 <img src="caloriesDayOfWeek.png" width="700" height="400" alt="Bar chart showing the average number of calories per day of week." />
 
 <br>
-This bar graph shows that the average amount of calories also increases with expenditure
+This bar graph shows that the average amount of calories also increases with expenditure, again correlating with the intensity of activity being between 6-8pm, likely when users are getting off work and exercising or running errands. Note that the hourly calorie burn is never at zero as users burn calories during rest.
+<br>
 <br>
 <img src="hourlyCalories.png" width="900" height="500" alt="Bar chart showing the average number calories burned per hour of the day." />
 <br>
