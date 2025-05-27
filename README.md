@@ -991,4 +991,17 @@ This bar graph shows that the average amount of calories also increases with exp
 <img src="hourlyCalories.png" width="900" height="500" alt="Bar chart showing the average number calories burned per hour of the day." />
 <br>
 
+## 🎬 Act
+
+According to CDC taking 8,000 steps per day was associated with a 51% lower risk for all-cause mortality (or death from all causes). Taking 12,000 steps per day was associated with a 65% lower risk compared with taking 4,000 steps. Bellabeat can encourage people to take at least 10,000 steps per day, explaining the benefits for their health. Sending notifications daily at different times will make users conscious of the number of steps achieved so far and encourage them to meet the set target of 10,000 steps according to CDC. 
+
+The CDC also recommends that users should target heart-rates between 64% and 76% of their maximum heart rate. For high-intensity physical activity, the CDC recommends target heart rates between 77% and 93% of maximum heart rate.
+
+Exercises such as joggling, light walking, aerobics all can help users reach their fat-burning zone, but it is still important to elevate your heart into the vigorous one from time to time for cardiovascular strength.
+
+🔢 Obtain more data for an accurate analysis.
+🚲 Educational healthy style campaign encourages users to have short active exercises during the week
+🎁 Educational healthy style campaign can pair with a point-award incentive system
+
+
 
