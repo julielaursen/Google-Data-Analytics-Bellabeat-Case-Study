@@ -1001,8 +1001,16 @@ Exercises such as joggling, light walking, aerobics all can help users reach the
 
 **When to target users**
 
-
 <img src="marketingfunnel.png" width="900" height="500" alt="image of the marketing funnel with the four stages of awareness, consideration, conversion and loyalty." />
+
+** Awareness **
+
+** Consideration **
+
+** Conversion **
+
+** Loyalty **
+
 
 
 
