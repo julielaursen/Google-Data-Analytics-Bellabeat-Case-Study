@@ -932,17 +932,17 @@ Sleep efficiency thresholds are considered good/normal, based on the National Sl
 
 Participants recorded the most data between Tuesday-Thursday and this chart suggests that data may drop off during the weekend, when users might not feel as disciplined.
 <br>
-
 <img src="recordedDaysPerWeek.png" width="900" height="500" alt="Bar chart showing number of recorded days per day of the week. Tuesday and Wednesday have the most recorded days, while Monday has the fewest." />
-
+<br>
 This bar graph of Average Daily Steps per user by Day of Week shows that Saturday has the highest amount of steps at almost 10,000 steps per day. This indicates that users are more likely to have more steps when they have the most free time. 
 <br>
 <img src="dailyStepsDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of daily steps per day of the week." />
+<br>
 
 This bar graph also shows users have the most light activity on Saturdays. It is likely that users are running errands, doing housework or doing light exercise on Saturday more than on other days.  
-
 <br>
 <img src="lightlyActiveDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of lightly active days per day of the week." />
+<br>
 
 This plot shows that the users activity level by fairly, medium, or highly active. The key insights are that light activity dominates across users in both distance and time. This suggests that most users engage in light and likely unstructured movement (chores, cleaning, walking) as opposed to formalized exercise. Only a few users have frequent spikes in heavy exercise, suggesting formalized exercise or running. The majority of users have 0 minutes of intense activity.
 
@@ -954,7 +954,7 @@ This plot shows that the users activity level by fairly, medium, or highly activ
 
 This chart shows the users sleep levels by day of the week.
 
-<img src="sleep" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
+<img src="sleep.png" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
 
 <br>
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
