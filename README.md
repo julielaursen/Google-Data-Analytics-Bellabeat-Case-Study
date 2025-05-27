@@ -678,9 +678,9 @@ I decided to merge the `sleep` daily table with the `daily activity` table to gi
 +     inner_join(daily_sleep_clean, by = c("Id", "ActivityDate")) %>%
 ```
 
-### Summary of Tables
+### 🗄️ Summary of Tables - ERD diagram
 
-<img src="ERDdiagram.png" width="500" height="500" alt="Scatterplot showing sleep efficiency." />
+<img src="ERDdiagram.png" width="1000" height="1000" alt="ERD diagram of tables and relationships." />
 
 ### 📊 Summary of Key Metrics
 
