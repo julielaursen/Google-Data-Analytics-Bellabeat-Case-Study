@@ -1073,6 +1073,8 @@ One gap in our analysis was the lack of weightlog info as only 8 participants fi
 Our goal is to turn active users into loyal brand followers, preferably customers who create UGC (User Generated Content). Our analysis earlier indicated that almost 75% of our users were highly engaged users who recorded 30-31 days of activity for the month. 
 
 - We can pair with a point-award incentive system
+- We can offer discount for birthdays or anniversaries
+- We can offer discounts for users who leave reviews
 - Re-marketing toward users who are currently using one of our devices (Leaf, Time, Spring) to encourage users to purchase other types of trackers. For instance, a user who is consistently using the Leaf (Belllabeat's classic wellness tracker) may be intersted in Spring, our water bottl which tracks daily water intake and hydration levels.
 
 
