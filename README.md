@@ -931,6 +931,8 @@ Sleep efficiency thresholds are considered good/normal, based on the National Sl
 
 ### 🖼️ Data Visualizations
 <br>
+I created a series of visualizations using ggplot2 in R. To keep this summary accessible and focused on insights rather than technical details, I'm presenting only the visual outputs rather than the underlying code.
+<br>
 Participants recorded the most data between Tuesday-Thursday and this chart suggests that data may drop off during the weekend, when users might not feel as disciplined.
 <br>
 <br>
@@ -954,6 +956,16 @@ This plot shows that the users activity level by fairly, medium, or highly activ
 <img src="distance_metrics.png" width="1000" height="500">
 <br>
 
+This bar graph shows that users have the most hourly activity during the evening
+<br>
+<img src="hourlyIntensities.png" width="900" height="500" alt="Bar chart showing the average hourly activity per day." />
+<br>
+
+This bar graph shows that users have the most hourly steps during the evening
+<br>
+<img src="hourlySteps" width="900" height="500" alt="Bar chart showing the average number of steps per hour of the day." />
+<br>
+
 This chart shows the users sleep levels by day of the week with the highest amount of sleep on Sunday, which is also when users are getting the lowest step count and lowest active days per week. This suggests that most participants think of Sundays as "Rest days' and may be intentionally working out on other days of the week.
 
 <img src="sleep.png" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
@@ -968,5 +980,11 @@ The scatter plot of steps vs. calories burned reveals a strong positive correlat
 The scatterplot of average calories burned per day of the week also shows a correlation between the most calories burned on the highest activity day (Saturday) and the lowest amount of calories burned on the lowest activity day (Sunday).
 <br>
 <img src="caloriesDayOfWeek.png" width="700" height="400" alt="Bar chart showing the average number of calories per day of week." />
+
+<br>
+This bar graph shows that the average amount of calories also increases with expenditure
+<br>
+<img src="hourlySteps" width="900" height="500" alt="Bar chart showing the average number calories burned per hour of the day." />
+<br>
 
 
