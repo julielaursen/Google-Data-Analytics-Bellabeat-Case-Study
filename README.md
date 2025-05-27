@@ -696,6 +696,6 @@ The scatter plot of steps vs. calories burned reveals a strong positive correlat
 
 ![image](https://github.com/user-attachments/assets/e0773b68-900b-4a3d-8602-dcdf0269eb00)
 
-<img src="caloriesDaysOfWeek.png" width="900" height="500" alt="Bar chart showing the average number of calories per day of week." />
+<img src="caloriesDayOfWeek.png" width="700" height="400" alt="Bar chart showing the average number of calories per day of week." />
 
 
