@@ -80,7 +80,7 @@ Then we read the data, changing each csv file into a data frame that we can exec
 
 ```r
 daily_activity <- read_csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv")
-heartrate_seconds_merged <- read_csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16/heartrate_seconds_merged.csv")
+heartrate_seconds <- read_csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16/heartrate_seconds_merged.csv")
 hourly_calories <- read_csv("mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16/hourlyCalories_merged.csv")
 ...
 
@@ -672,13 +672,15 @@ daily_merged %>%
 
 - The mean **sedentary time** is 712 minutes, which is almost 12 hours of sedentary time a day.
 - The mean **lightly active** minutes is roughly 3.5 hours
-- However, for **fairly active** and **very active minutes**, users got less than an hour. Most users engaged in very little intense exercise (some none at all).
+- However, for **fairly active** and **very active minutes**, users got close to the recommended 30 minutes per day. Most users engaged in very little intense exercise (some none at all).
 - The mean **total steps** is 8541, with the max user getting 22,770 steps. This means users are moderately active.
 - The mean **calories** were 2411
-- The mean **total minutes asleep** was 419.5 which is roughly 7 hours, consistent with healthy guidelines.
+- The mean **total minutes asleep** was 419.5 which is roughly 7 hours, almost consistent with healthy guidelines but could be improved to be within the recommended 7-9 hours.
 - The mean **total time in bed** was 458, meaning users spent approximately 40 minutes in bed not sleeping
 
-The <a href="https://www.cdc.gov/physical-activity-basics/guidelines/adults.html">CDC</a> recommends at least 150 minutes of moderate-intensity physical activity a week. This can also be 75 minutes of vigorous-intensity or an equivalent combination of mdoerate and vigorous-intensity physical activity per week.
+### Activity Summary
+
+The <a href="https://www.cdc.gov/physical-activity-basics/guidelines/adults.html">CDC</a> recommends at least 150 minutes of moderate-intensity physical activity a week. This can also be 75 minutes of vigorous-intensity or an equivalent combination of mdoerate and vigorous-intensity physical activity per week. Let's look at the first full week.
 
 ```r
 # Define the full week
@@ -706,8 +708,10 @@ summary_table <- daily_activity_clean %>%
 # Show table
 summary_table %>%
   kable(digits = 2, caption = "Total Very Active and Sedentary Minutes (Apr 17–23, 2016)")
+```
 
-```r
+Table: Very Active and Sedentary Minutes (Apr 24–30, 2016)
+
 |         Id| Days_Recorded| Total_Active_Minutes| Active_Days| Total_Sedentary_Minutes|
 |----------:|-------------:|--------------------:|-----------:|-----------------------:|
 | 5577150313|             7|                  705|           7|                    4774|
@@ -736,8 +740,106 @@ summary_table %>%
 | 4319703577|             7|                    2|           2|                    5982|
 | 2320127002|             7|                    1|           1|                    8316|
 | 2026352035|             7|                    0|           0|                    5442|
-```
-This shows that the users who are recording activity the most (6-7 days a week) are also the users who have the most very active days. These users would be in the 3rd quartile of the summary or top 25% of users, who had over 38 very active minutes per day. These users are meeting the CDC guidelines for vigorous physical activity. This is also higher than the national average, indicating that fitbit users may show a selection bias as individauls who are more health-conscious or physically active may be more likely to purchase a fitbit.
+
+Table: Very Active and Sedentary Minutes (Apr 24–30, 2016)
+
+|         Id| Days_Recorded| Total_Active_Minutes| Active_Days| Total_Sedentary_Minutes|
+|----------:|-------------:|--------------------:|-----------:|-----------------------:|
+| 1503960366|             7|                  337|           7|                    5773|
+| 1624580081|             7|                   44|           3|                    8784|
+| 1644430081|             7|                   31|           4|                    8341|
+| 2022484408|             7|                  195|           7|                    7801|
+| 2026352035|             7|                    0|           0|                    4841|
+| 2320127002|             7|                    3|           1|                    9132|
+| 2873212765|             7|                  147|           6|                    8155|
+| 3372868164|             7|                   77|           4|                    7503|
+| 3977333714|             7|                  181|           6|                    5187|
+| 4319703577|             7|                   40|           6|                    4436|
+| 4388161847|             7|                   96|           7|                    5585|
+| 4445114986|             7|                   61|           2|                    6455|
+| 4558609924|             7|                   80|           6|                    7379|
+| 4702921684|             7|                   53|           7|                    4928|
+| 5553957443|             7|                  202|           5|                    4751|
+| 5577150313|             7|                  775|           7|                    4752|
+| 6962181067|             7|                  160|           6|                    4731|
+| 7007744171|             7|                  188|           5|                    7234|
+| 7086361926|             7|                  314|           6|                    5419|
+| 8053475328|             7|                  550|           7|                    8253|
+| 8378563200|             7|                  225|           5|                    4953|
+| 8583815059|             7|                  146|           6|                    8216|
+| 8877689391|             7|                  492|           7|                    7949|
+
+
+Table: Very Active and Sedentary Minutes (May 1–7, 2016)
+
+|         Id| Days_Recorded| Total_Active_Minutes| Active_Days| Total_Sedentary_Minutes|
+|----------:|-------------:|--------------------:|-----------:|-----------------------:|
+| 1503960366|             7|                  266|           7|                    5967|
+| 1624580081|             7|                  193|           2|                    8866|
+| 1644430081|             7|                   72|           6|                    7627|
+| 2022484408|             7|                  268|           7|                    7955|
+| 2026352035|             7|                    0|           0|                    4598|
+| 2320127002|             7|                   25|           2|                    8861|
+| 2873212765|             7|                   96|           4|                    7868|
+| 3977333714|             7|                  169|           6|                    4909|
+| 4319703577|             7|                   52|           5|                    5431|
+| 4388161847|             7|                  263|           7|                    5634|
+| 4445114986|             7|                   85|           4|                    5439|
+| 4558609924|             7|                   58|           3|                    7940|
+| 5553957443|             7|                  114|           4|                    4978|
+| 6290855005|             7|                    8|           1|                    8144|
+| 6962181067|             7|                   68|           4|                    4767|
+| 7086361926|             7|                  326|           7|                    5734|
+| 8053475328|             7|                  480|           5|                    8649|
+| 8378563200|             7|                  364|           6|                    5419|
+| 8583815059|             7|                   12|           2|                    9441|
+| 8877689391|             7|                  389|           6|                    8205|
+
+These tables show that the users who are recording activity the most (6-7 days a week) are also the users who have the most very active days. Many of these users would be in the 3rd quartile of the summary or top 25% of users, who had over 38 very active minutes per day. These users are meeting the CDC guidelines for physical activity. This is also higher than the national average, indicating that fitbit users may show a selection bias as individuals who are more health-conscious or physically active may be more likely to purchase a fitbit.
+
+**Heartrate Data**
+
+| Id         | Cardio    | Fat Burn | Peak     | Resting   | Total High Intensity | Meets Guidelines |
+|------------|-----------|----------|----------|-----------|----------------------|------------------|
+| 2022484408 | 273.75    | 5155.08  | 48.25    | 7364.92   | 322.00               | TRUE             |
+| 2026352035 | 0.00      | 175.58   | 0.00     | 31.92     | 0.00                 | FALSE            |
+| 2347167796 | 167.42    | 3777.33  | 28.42    | 8750.42   | 195.83               | TRUE             |
+| 4020332650 | 249.50    | 13753.33 | 21.00    | 9764.58   | 270.50               | TRUE             |
+| 4388161847 | 141.08    | 2707.67  | 96.58    | 17867.00  | 237.67               | TRUE             |
+| 4558609924 | 159.92    | 8284.75  | 25.17    | 7544.17   | 185.08               | TRUE             |
+| 5553957443 | 177.25    | 2758.50  | 1.83     | 18326.92  | 179.08               | TRUE             |
+| 5577150313 | 224.08    | 4688.50  | 32.67    | 15768.08  | 256.75               | TRUE             |
+| 6117666160 | 25.75     | 8129.25  | 15.50    | 5071.08   | 41.25                | FALSE            |
+| 6775888955 | 45.92     | 1846.67  | 0.83     | 837.50    | 46.75                | FALSE            |
+| 6962181067 | 387.33    | 7070.33  | 74.50    | 14661.67  | 461.83               | TRUE             |
+| 7007744171 | 158.58    | 8528.92  | 4.25     | 2440.92   | 162.83               | TRUE             |
+| 8792009665 | 9.50      | 2584.33  | 0.08     | 7642.83   | 9.58                 | FALSE            |
+| 8877689391 | 1476.08   | 4060.92  | 1235.08  | 12298.00  | 2711.17              | TRUE             |
+
+There are ten total users that meet the guidelines for physical activity ( ≥150 minutes of VeryActiveMinutes). Of those users, 6/10 also meet the CDC heart rate zone guidelines (≥75 minutes in Cardio + Peak zones). This indicates that there is a correlation between rigorous physical activity and heart health.
+
+| Id         | Meets HR | High Intensity (min) | Week 1 | Week 2 | Week 3 | Total Min |
+|------------|----------|----------------------|--------|--------|--------|-----------|
+| 2022484408 | ✅       | 322.00               | 311    | 195    | 268    | 774       |
+| 2026352035 | ❌       | 0.00                 | 0      | 0      | 0      | 0         |
+| 2347167796 | ✅       | 195.83               | 87     | 50     | 0      | 137       |
+| 4020332650 | ✅       | 270.50               | 0      | 0      | 0      | 0         |
+| 4388161847 | ✅       | 237.67               | 208    | 96     | 263    | 567       |
+| 4558609924 | ✅       | 185.08               | 53     | 80     | 58     | 191       |
+| 5553957443 | ✅       | 179.08               | 141    | 202    | 114    | 457       |
+| 5577150313 | ✅       | 256.75               | 705    | 775    | 0      | 1480      |
+| 6117666160 | ❌       | 41.25                | 37     | 0      | 0      | 37        |
+| 6775888955 | ❌       | 46.75                | 0      | 0      | 0      | 0         |
+| 6962181067 | ✅       | 461.83               | 242    | 160    | 68     | 470       |
+| 7007744171 | ✅       | 162.83               | 257    | 188    | 0      | 445       |
+| 8792009665 | ❌       | 9.58                 | 0      | 0      | 0      | 0         |
+| 8877689391 | ✅       | 2711.17              | 487    | 492    | 389    | 1368      |
+
+I also inspected the users who did not meet the criteria for HR and who had lightly active minutes. These users were not completely sedentary and had an average step count of 4000-6000 per day. This shows that walking and light activity is NOT enough to meet heartrate guidelines as they do not put a user in the Peak or Fat Burning Zones. 
+
+![image](https://github.com/user-attachments/assets/a3d2d899-79f2-489e-945b-86cf8649fe13)
+
+### Sleep Summary
 
 The CDC also recommends between 7 and 9 hours of sleep. Users are getting roughly 6.98 hours of sleep on average which, after rounding, is inline with CDC guidelines.
 
