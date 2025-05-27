@@ -929,8 +929,9 @@ Sleep efficiency thresholds are considered good/normal, based on the National Sl
 ## 🫶 Share
 
 ### 🖼️ Data Visualizations
-
+<br>
 Participants recorded the most data between Tuesday-Thursday and this chart suggests that data may drop off during the weekend, when users might not feel as disciplined.
+<br>
 <br>
 <img src="recordedDaysPerWeek.png" width="900" height="500" alt="Bar chart showing number of recorded days per day of the week. Tuesday and Wednesday have the most recorded days, while Monday has the fewest." />
 <br>
@@ -952,7 +953,7 @@ This plot shows that the users activity level by fairly, medium, or highly activ
 <img src="distance_metrics.png" width="1000" height="500">
 <br>
 
-This chart shows the users sleep levels by day of the week.
+This chart shows the users sleep levels by day of the week with the highest amount of sleep on Sunday, which is also when users are getting the lowest step count and lowest active days per week. This suggests that most participants think of Sundays as "Rest days' and may be intentionally working out on other days of the week.
 
 <img src="sleep.png" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
 
