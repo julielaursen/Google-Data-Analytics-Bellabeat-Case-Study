@@ -739,6 +739,26 @@ summary_table %>%
 ```
 This shows that the users who are recording activity the most (6-7 days a week) are also the users who have the most very active days. These users would be in the 3rd quartile of the summary or top 25% of users, who had over 38 very active minutes per day. These users are meeting the CDC guidelines for vigorous physical activity. This is also higher than the national average, indicating that fitbit users may show a selection bias as individauls who are more health-conscious or physically active may be more likely to purchase a fitbit.
 
+The CDC also recommends between 7 and 9 hours of sleep. Users are getting roughly 6.98 hours of sleep on average which, after rounding, is inline with CDC guidelines.
+
+```
+> daily_sleep_clean %>%
++     mutate(SleepEfficiency = TotalMinutesAsleep / TotalTimeInBed) %>%
++     summarise(avg_efficiency = mean(SleepEfficiency, na.rm = TRUE))
+# A tibble: 1 × 1
+  avg_efficiency
+           <dbl>
+1          0.917
+```
+
+Sleep efficiency thresholds are considered good/normal, based on the National Sleep Foundation (NSF). 
+
+| Sleep Efficiency | Result | Interpretation                                                            |
+| ---------------- | --------|---------------------------------------------------------------- |
+| **≥ 85%**        | ✅     | Considered normal/good                                                  |
+| **75–84%**       | ⚠️     |May indicate mild sleep issues                                         |
+| **< 75%**        | 🚩     |Low — may suggest poor sleep quality (e.g., insomnia, frequent waking) |
+
 ## 🫶 Share
 
 ### 🖼️ Data Visualizations
