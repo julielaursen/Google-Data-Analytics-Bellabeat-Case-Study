@@ -979,12 +979,13 @@ The scatter plot of steps vs. calories burned reveals a strong positive correlat
 <br>
 The scatterplot of average calories burned per day of the week also shows a correlation between the most calories burned on the highest activity day (Saturday) and the lowest amount of calories burned on the lowest activity day (Sunday).
 <br>
+<br>
 <img src="caloriesDayOfWeek.png" width="700" height="400" alt="Bar chart showing the average number of calories per day of week." />
 
 <br>
 This bar graph shows that the average amount of calories also increases with expenditure
 <br>
-<img src="hourlySteps" width="900" height="500" alt="Bar chart showing the average number calories burned per hour of the day." />
+<img src="hourlyCalories.png" width="900" height="500" alt="Bar chart showing the average number calories burned per hour of the day." />
 <br>
 
 
