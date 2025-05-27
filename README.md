@@ -946,8 +946,16 @@ This bar graph also shows users have the most light activity on Saturdays. It is
 
 This plot shows that the users activity level by fairly, medium, or highly active. The key insights are that light activity dominates across users in both distance and time. This suggests that most users engage in light and likely unstructured movement (chores, cleaning, walking) as opposed to formalized exercise. Only a few users have frequent spikes in heavy exercise, suggesting formalized exercise or running. The majority of users have 0 minutes of intense activity.
 
+<br>
 <img src="activity_metrics.png" width="1000" height="500">
+<br>
 <img src="distance_metrics.png" width="1000" height="500">
+<br>
+
+This chart shows the users sleep levels by day of the week.
+
+<img src="sleep" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
+
 <br>
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
 <br>
