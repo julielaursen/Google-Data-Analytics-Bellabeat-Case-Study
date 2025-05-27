@@ -976,7 +976,7 @@ This chart shows the users sleep levels by day of the week with the highest amou
 This chart shows the users sleep efficiency with the dashed line being perfect sleep efficiency and points below the line indicating sleep inefficiency. More time in bed has a strong positive correlation to more sleep. Some points far below the line may represent nights were users were in bed but had very low sleep duration.
 <br>
 <br>
-<img src="sleepvsinbed" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
+<img src="sleepvsinbed.png" width="900" height="500" alt="Scatterplot showing sleep efficiency." />
 
 
 <br>
