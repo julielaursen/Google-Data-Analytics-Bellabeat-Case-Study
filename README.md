@@ -680,7 +680,7 @@ daily_merged %>%
 
 #### Data Visualizations
 
-Participants recorded the most data between Tuesday-Thursday.
+Participants recorded the most data between Tuesday-Thursday and this chart suggests that data may drop off during the weekend, when users might not feel as disciplined.
 
 <img src="recordedDaysPerWeek.png" width="900" height="500" alt="Bar chart showing number of recorded days per day of the week. Tuesday and Wednesday have the most recorded days, while Monday has the fewest." />
 
