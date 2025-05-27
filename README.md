@@ -999,9 +999,20 @@ The CDC also recommends that users should target heart-rates between 64% and 76%
 
 Exercises such as joggling, light walking, aerobics all can help users reach their fat-burning zone, but it is still important to elevate your heart into the vigorous one from time to time for cardiovascular strength.
 
+**When to target users**
+
+
+
+
+
+
+
+
 🔢 Obtain more data for an accurate analysis.
 🚲 Educational healthy style campaign encourages users to have short active exercises during the week
 🎁 Educational healthy style campaign can pair with a point-award incentive system
+
+
 
 
 
