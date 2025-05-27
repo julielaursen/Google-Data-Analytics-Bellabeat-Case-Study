@@ -1005,7 +1005,17 @@ Exercises such as joggling, light walking, aerobics all can help users reach the
 
 ** Awareness **
 
+The study's participants show the following characteristics:
+
+**High Sedentary Time**: Many users exhibit prolonged periods of inactivity, indicating a sedentary lifestyle.
+
+**Low Very Active Minutes**: A significant number of users have minimal very active minutes, suggesting limited engagement in high-intensity activities.
+
+Ideally, we should obtain more data for an accurate analysis so we know which users to target. The data we analyzed did not include any demographic information such as gender, location, and age. It is difficult to create a set of user personas to target for marketing without additional data. We should consider collecting more data about the user, possibly with manual data collection during sign up. However, since Bellabeat already invests in Google Search, Facebook, Instagram and YouTube, they are already taking advantage of SEM (paid advertisements) and Social Media Marketing. These marketing strategies will best target these users with high sedentary times as they may be scrolling social media platforms during these times of low-activity. 
+
 ** Consideration **
+
+We could run the experiment again with a larger data set and for multiple concurrent months in order to build a case study which we can put on our website and try to get referenced in articles about our product. This case study would lend credibility and build trust with our customers. If our case study is referenced with backlinks directing users to the Bellabeat site, this will also increase our SEO (Search Engine Optimization) which could increase our web traffic. This strategy will likely lead to consideration by users who already know that wearable activity trackers exist but have not yet made a purchase.
 
 ** Conversion **
 
@@ -1014,7 +1024,6 @@ Exercises such as joggling, light walking, aerobics all can help users reach the
 
 
 
-🔢 Obtain more data for an accurate analysis.
 🚲 Educational healthy style campaign encourages users to have short active exercises during the week
 🎁 Educational healthy style campaign can pair with a point-award incentive system
 
