@@ -678,6 +678,8 @@ daily_merged %>%
 - The mean **total minutes asleep** was 419.5 which is roughly 7 hours, consistent with healthy guidelines.
 - The mean **total time in bed** was 458, meaning users spent approximately 40 minutes in bed not sleeping
 
+## 🫶 Share
+
 ### 🖼️ Data Visualizations
 
 Participants recorded the most data between Tuesday-Thursday and this chart suggests that data may drop off during the weekend, when users might not feel as disciplined.
