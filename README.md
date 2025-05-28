@@ -899,7 +899,7 @@ I was able to show that most users were high users. Note that the one user with 
 >
 ```
 
-<img src="daily_use.png" width="700" height="700" alt="Scatter plot showing steps vs calories." />
+<img src="iamges/daily_use.png" width="700" height="700" alt="Scatter plot showing steps vs calories." />
 
 **❤️ Heartrate Data**
 
@@ -941,7 +941,7 @@ There are ten total users that meet the guidelines for physical activity ( ≥15
 
 I also inspected the users who did not meet the criteria for HR and who had lightly active minutes. These users were not completely sedentary and had an average step count of 4000-6000 per day. This shows that walking and light activity is NOT enough to meet heartrate guidelines as they do not put a user in the Peak or Fat Burning Zones. 
 
-<img src="HeartRateZones.png" width="800" height="800" alt="Scatter plot showing steps vs calories." />
+<img src="images/HeartRateZones.png" width="800" height="800" alt="Scatter plot showing steps vs calories." />
 <br>
 
 ### 😴 Sleep Summary
@@ -975,60 +975,60 @@ I created a series of visualizations using ggplot2 in R. To keep this summary ac
 Participants recorded the most data between Tuesday-Thursday and this chart suggests that data may drop off during the weekend, when users might not feel as disciplined.
 <br>
 <br>
-<img src="recordedDaysPerWeek.png" width="900" height="500" alt="Bar chart showing number of recorded days per day of the week. Tuesday and Wednesday have the most recorded days, while Monday has the fewest." />
+<img src="images/recordedDaysPerWeek.png" width="900" height="500" alt="Bar chart showing number of recorded days per day of the week. Tuesday and Wednesday have the most recorded days, while Monday has the fewest." />
 <br>
 This bar graph of Average Daily Steps per user by Day of Week shows that Saturday has the highest amount of steps at almost 10,000 steps per day. This indicates that users are more likely to have more steps when they have the most free time. <br>
 <br>
-<img src="dailyStepsDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of daily steps per day of the week." />
+<img src="images/dailyStepsDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of daily steps per day of the week." />
 <br>
 
 This bar graph also shows users have the most light activity on Saturdays. It is likely that users are running errands, doing housework or doing light exercise on Saturday more than on other days.  
 <br>
-<img src="lightlyActiveDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of lightly active days per day of the week." />
+<img src="images/lightlyActiveDaysPerWeek.png" width="900" height="500" alt="Bar chart showing the average number of lightly active days per day of the week." />
 <br>
 
 This plot shows that the users activity level by fairly, medium, or highly active. The key insights are that light activity dominates across users in both distance and time. This suggests that most users engage in light and likely unstructured movement (chores, cleaning, walking) as opposed to formalized exercise. Only a few users have frequent spikes in heavy exercise, suggesting formalized exercise or running. The majority of users have 0 minutes of intense activity.
 
 <br>
-<img src="activity_metrics.png" width="1000" height="500">
+<img src="images/activity_metrics.png" width="1000" height="500">
 <br>
-<img src="distance_metrics.png" width="1000" height="500">
+<img src="images/distance_metrics.png" width="1000" height="500">
 <br>
 
 This bar graph shows that users exert the most activity during the evening, peaking between 6pm-8pm. This likely shows that users are exercising or completing light activity directly after work. There is another spike around what might be considered lunch where users might be getting in a quick workout or just walking more to get lunch.
 <br>
 <br>
-<img src="hourlyIntensities.png" width="900" height="500" alt="Bar chart showing the average hourly activity per day." />
+<img src="images/hourlyIntensities.png" width="900" height="500" alt="Bar chart showing the average hourly activity per day." />
 <br>
 
 This bar graph shows that users have the most hourly steps during the evening
 <br>
 <br>
-<img src="hourlySteps.png" width="900" height="500" alt="Bar chart showing the average number of steps per hour of the day." />
+<img src="images/hourlySteps.png" width="900" height="500" alt="Bar chart showing the average number of steps per hour of the day." />
 <br>
 <br>
 This chart shows the users sleep levels by day of the week with the highest amount of sleep on Sunday, which is also when users are getting the lowest step count and lowest active days per week. This suggests that most participants think of Sundays as "Rest days' and may be intentionally working out on other days of the week.
 
-<img src="sleep.png" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
+<img src="images/sleep.png" width="900" height="500" alt="Bar chart showing the average sleep minutes per day of the week." />
 
 <br>
 This chart shows the users sleep efficiency with the dashed line being perfect sleep efficiency and points below the line indicating sleep inefficiency. More time in bed has a strong positive correlation to more sleep. Some points far below the line may represent nights were users were in bed but had very low sleep duration.
 <br>
 <br>
-<img src="sleepvsinbed.png" width="500" height="500" alt="Scatterplot showing sleep efficiency." />
+<img src="images/sleepvsinbed.png" width="500" height="500" alt="Scatterplot showing sleep efficiency." />
 
 
 <br>
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
 <br>
 <br>
-<img src="steps.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
+<img src="iamges/steps.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
 <br>
 <br>
 The scatter plot of total distance vs. calories burned also reveals a strong positive correlation. As users' daily distance increases, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. 
 <br>
 <br>
-<img src="../imagestotaldistancevscalories.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
+<img src="images/totaldistancevscalories.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
 <br>
 <br>
 
@@ -1036,13 +1036,13 @@ The scatter plot of total distance vs. calories burned also reveals a strong pos
 The scatterplot of average calories burned per day of the week also shows a correlation between the most calories burned on the highest activity day (Saturday) and the lowest amount of calories burned on the lowest activity day (Sunday).
 <br>
 <br>
-<img src="caloriesDayOfWeek.png" width="700" height="400" alt="Bar chart showing the average number of calories per day of week." />
+<img src="images/caloriesDayOfWeek.png" width="700" height="400" alt="Bar chart showing the average number of calories per day of week." />
 
 <br>
 This bar graph shows that the average amount of calories also increases with expenditure, again correlating with the intensity of activity being between 6-8pm, likely when users are getting off work and exercising or running errands. Note that the hourly calorie burn is never at zero as users burn calories during rest.
 <br>
 <br>
-<img src="hourlyCalories.png" width="900" height="500" alt="Bar chart showing the average number calories burned per hour of the day." />
+<img src="images/hourlyCalories.png" width="900" height="500" alt="Bar chart showing the average number calories burned per hour of the day." />
 <br>
 
 ## 🎬 Act
@@ -1055,7 +1055,7 @@ Exercises such as joggling, light walking, aerobics all can help users reach the
 
 **When to target users**
 
-<img src="marketingfunnel.png" width="900" height="500" alt="image of the marketing funnel with the four stages of awareness, consideration, conversion and loyalty." />
+<img src="images/marketingfunnel.png" width="900" height="500" alt="image of the marketing funnel with the four stages of awareness, consideration, conversion and loyalty." />
 
 ### Awareness ###
 
