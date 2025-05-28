@@ -899,7 +899,7 @@ I was able to show that most users were high users. Note that the one user with 
 >
 ```
 
-<img src="daily_use.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
+<img src="daily_use.png" width="800" height="800" alt="Scatter plot showing steps vs calories." />
 
 **❤️ Heartrate Data**
 
