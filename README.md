@@ -682,7 +682,7 @@ I decided to merge the `sleep` daily table with the `daily activity` table to gi
 
 Depending on hour ActivityDate is split up, relationships are 1:1 between the composite keys of Id and ActivityDate. There is not a guaranteed 1:1 relationship at the (Id, ActivityDate) level, depending on whether time is split from datetime in the ActivityDate column on data cleaning.
 
-<img src="ERDdiagram2.png" width="1000" height="1000" alt="ERD diagram" />
+<img src="images/ERDdiagram2.png" width="1000" height="1000" alt="ERD diagram" />
 
 
 ### 📊 Summary of Key Metrics
