@@ -1087,8 +1087,16 @@ Our goal is to turn active users into loyal brand followers, preferably customer
 
 We should also implement gamification elements, such as challenges, badges, leaderboards, and streaks to motivate users to achieve their wellness goals. For example, only 24 out of 33 users tracked their sleep, indicating a potential area for increased engagement. For both sleep and activity monitoring, we can leverage peak times for marketing campaigns. For instance, we can send activity notifications between 6pm-8pm when users are most likely to start engaging in light to vigorous physical activity. We can also gently remind users who have a gap between total time in bed to sleep that there are some sleep hygeine practices such as turning off your television and making the room dark, whcih could reduce their time awake in bed to total time. They could track this number decreasing and we could correlate it to an increase in TotalSleep.
 
+### References ###
 
+**CDC Physical Activity Guidelines**
+🔗 https://www.cdc.gov/physical-activity-basics/guidelines/adults.html
 
+**CDC Heart Rate Zones / Measuring Intensity**
+🔗 https://www.cdc.gov/physicalactivity/basics/measuring/index.html
+
+**CDC Sleep Duration Guidelines**
+🔗 https://www.cdc.gov/sleep/about/index.html
 
 
 
