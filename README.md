@@ -1022,7 +1022,7 @@ This chart shows the users sleep efficiency with the dashed line being perfect s
 The scatter plot of steps vs. calories burned reveals a strong positive correlation. As users' daily step counts increase, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. However, outliers indicate that other factors—such as non-step activities or metabolic differences—also influence calorie burn.
 <br>
 <br>
-<img src="iamges/steps.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
+<img src="images/steps.png" width="500" height="500" alt="Scatter plot showing steps vs calories." />
 <br>
 <br>
 The scatter plot of total distance vs. calories burned also reveals a strong positive correlation. As users' daily distance increases, their total calories burned also tends to rise. This suggests that physical activity, as measured by steps, is a significant contributor to daily energy expenditure. 
